@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaxCrest Advisory and Accounting Services</title>
+<meta name="description" content="TaxCrest Advisory and Accounting Services — Professional accounting, GST, income tax, TDS, CMA data and project report services. Trusted financial consultancy for businesses and individuals.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+  :root {
+    --navy: #0A1628;
+    --navy-mid: #112240;
+    --navy-light: #1A3355;
+    --blue: #1565C0;
+    --blue-bright: #1E88E5;
+    --green: #00C896;
+    --green-light: #00E6AD;
+    --white: #FFFFFF;
+    --off-white: #F4F7FC;
+    --grey-light: #E8EDF5;
+    --grey: #8A9BB5;
+    --grey-dark: #4A5568;
+    --text: #1A2640;
+    --gold: #D4AF37;
+    --shadow: 0 8px 40px rgba(10,22,40,0.13);
+    --shadow-lg: 0 20px 60px rgba(10,22,40,0.18);
+    --radius: 14px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,22,40,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: var(--transition);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 70px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--green), var(--blue-bright));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; color: #fff; font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    flex-shrink: 0;
+  }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+  .logo-name { color: #fff; font-size: 15px; font-weight: 600; font-family: 'DM Sans',sans-serif; }
+  .logo-tagline { color: var(--green); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+  .nav-links { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.78); text-decoration: none;
+    font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 8px;
+    transition: var(--transition);
+  }
+  .nav-links a:hover { color: var(--green); background: rgba(0,200,150,0.08); }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--green), #00a87a);
+    color: #fff !important; padding: 9px 20px !important;
+    border-radius: 50px !important; font-weight: 600 !important;
+    font-size: 13px !important;
+  }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,200,150,0.4); }
+
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 5px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: #fff; border-radius: 2px; transition: var(--transition);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(21,101,192,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 20% 80%, rgba(0,200,150,0.12) 0%, transparent 55%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    align-items: center; position: relative; z-index: 2;
+    padding-top: 100px; padding-bottom: 60px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,200,150,0.12); border: 1px solid rgba(0,200,150,0.3);
+    color: var(--green); font-size: 12px; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 7px 16px; border-radius: 50px; margin-bottom: 1.5rem;
+  }
+  .hero-badge i { font-size: 11px; }
+  .hero h1 {
+    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+    color: var(--white); line-height: 1.15; margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 span { color: var(--green); }
+  .hero-sub {
+    color: rgba(255,255,255,0.65); font-size: 1.05rem;
+    line-height: 1.75; margin-bottom: 2.2rem; max-width: 520px;
+    font-weight: 400;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--green), #00a87a);
+    color: #fff; padding: 14px 28px; border-radius: 50px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: var(--transition); border: none; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,200,150,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,200,150,0.45); }
+  .btn-outline {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.85); padding: 14px 28px; border-radius: 50px;
+    font-size: 15px; font-weight: 500; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: var(--transition);
+  }
+  .btn-outline:hover { border-color: var(--green); color: var(--green); }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3rem; padding-top: 2.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat-item { display: flex; flex-direction: column; gap: 4px; }
+  .stat-num {
+    font-family: 'Playfair Display',serif;
+    font-size: 2rem; font-weight: 700; color: var(--white); line-height: 1;
+  }
+  .stat-num span { color: var(--green); }
+  .stat-label { font-size: 12px; color: var(--grey); font-weight: 500; letter-spacing: 0.5px; }
+
+  /* Hero card */
+  .hero-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px; padding: 2rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  }
+  .hero-profile {
+    display: flex; align-items: center; gap: 1rem; margin-bottom: 1.8rem;
+    padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .profile-avatar {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue-bright), var(--green));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; font-weight: 700; color: #fff;
+    font-family: 'Playfair Display',serif; flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0,200,150,0.3);
+  }
+  .profile-info h3 { color: #fff; font-size: 1.1rem; margin-bottom: 3px; }
+  .profile-info p { color: var(--green); font-size: 12px; font-weight: 500; letter-spacing: 0.5px; }
+  .profile-verified {
+    margin-left: auto;
+    background: rgba(0,200,150,0.15); border: 1px solid rgba(0,200,150,0.3);
+    color: var(--green); font-size: 11px; font-weight: 600;
+    padding: 5px 10px; border-radius: 50px; display: flex; align-items: center; gap: 4px;
+  }
+
+  .service-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+  .pill {
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.8); font-size: 12px; font-weight: 500;
+    padding: 6px 12px; border-radius: 50px; transition: var(--transition);
+  }
+  .pill:hover { background: rgba(0,200,150,0.15); border-color: rgba(0,200,150,0.3); color: var(--green); }
+  .pill.active { background: rgba(0,200,150,0.15); border-color: rgba(0,200,150,0.4); color: var(--green); }
+
+  .rating-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 16px; background: rgba(0,200,150,0.08);
+    border-radius: var(--radius-sm); border: 1px solid rgba(0,200,150,0.15);
+  }
+  .stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; }
+  .rating-text { color: rgba(255,255,255,0.7); font-size: 13px; }
+  .rating-text strong { color: #fff; }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 90px 0; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--blue-bright); font-size: 12px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.8rem;
+  }
+  .section-label::before {
+    content: ''; display: block; width: 20px; height: 2px;
+    background: var(--green);
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--navy); line-height: 1.2; margin-bottom: 1rem;
+  }
+  .section-title span { color: var(--blue); }
+  .section-desc {
+    color: var(--grey-dark); font-size: 1rem; line-height: 1.75;
+    max-width: 580px;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--off-white); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-card-main {
+    background: var(--navy);
+    border-radius: 24px; padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    position: relative; overflow: hidden;
+  }
+  .about-card-main::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(0,200,150,0.15) 0%, transparent 70%);
+  }
+  .about-initials {
+    font-family: 'Playfair Display',serif;
+    font-size: 5rem; font-weight: 700;
+    color: rgba(255,255,255,0.08);
+    line-height: 1; margin-bottom: 1.5rem;
+  }
+  .about-card-main h3 { color: #fff; font-size: 1.5rem; margin-bottom: 0.4rem; }
+  .about-card-main .designation { color: var(--green); font-size: 13px; font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
+  .about-expertise { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; }
+  .expertise-tag {
+    background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75);
+    font-size: 12px; padding: 5px 12px; border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .contact-quick { display: flex; flex-direction: column; gap: 10px; }
+  .contact-item {
+    display: flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,0.7); font-size: 14px;
+  }
+  .contact-item i { color: var(--green); width: 16px; }
+  .contact-item a { color: inherit; text-decoration: none; }
+  .contact-item a:hover { color: var(--green); }
+  a.contact-item { color: rgba(255,255,255,0.7); text-decoration: none; cursor: pointer !important; pointer-events: all !important; }
+  a.contact-item:hover { color: var(--green); }
+
+  .float-badge {
+    position: absolute; top: -20px; right: -20px;
+    background: linear-gradient(135deg, var(--green), #00a87a);
+    color: #fff; padding: 16px 20px; border-radius: 16px;
+    text-align: center; box-shadow: 0 8px 30px rgba(0,200,150,0.4);
+    min-width: 110px;
+  }
+  .float-badge .num { font-size: 1.8rem; font-weight: 700; line-height: 1; font-family: 'Playfair Display',serif; }
+  .float-badge .lbl { font-size: 11px; font-weight: 500; opacity: 0.9; margin-top: 3px; }
+
+  .about-content h2 { margin-bottom: 1.2rem; }
+  .about-content p { color: var(--grey-dark); line-height: 1.8; margin-bottom: 1.5rem; font-size: 0.95rem; }
+  .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .highlight-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 16px; background: var(--white); border-radius: var(--radius-sm);
+    border: 1px solid var(--grey-light); transition: var(--transition);
+  }
+  .highlight-item:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(0,200,150,0.1); }
+  .highlight-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: linear-gradient(135deg, rgba(0,200,150,0.12), rgba(21,101,192,0.08));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--green); font-size: 15px; flex-shrink: 0;
+  }
+  .highlight-item h4 { font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; font-family: 'DM Sans',sans-serif; }
+  .highlight-item p { font-size: 0.8rem; color: var(--grey); margin: 0; line-height: 1.4; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--white); }
+  .services-header { text-align: center; margin-bottom: 4rem; }
+  .services-header .section-label { justify-content: center; }
+  .services-header .section-desc { margin: 0 auto; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--off-white); border-radius: var(--radius);
+    padding: 2rem; border: 1.5px solid var(--grey-light);
+    transition: var(--transition); position: relative; overflow: hidden;
+    cursor: default;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--blue-bright));
+    transform: scaleX(0); transition: var(--transition); transform-origin: left;
+  }
+  .service-card:hover { border-color: transparent; box-shadow: var(--shadow); transform: translateY(-4px); background: #fff; }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    width: 52px; height: 52px; border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0,200,150,0.12), rgba(21,101,192,0.08));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blue); font-size: 22px; margin-bottom: 1.2rem;
+    transition: var(--transition);
+  }
+  .service-card:hover .service-icon { background: linear-gradient(135deg, var(--green), var(--blue-bright)); color: #fff; }
+  .service-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 0.7rem; font-family: 'DM Sans',sans-serif; font-weight: 600; }
+  .service-card p { font-size: 0.875rem; color: var(--grey-dark); line-height: 1.7; margin-bottom: 1.2rem; }
+  .service-link {
+    color: var(--blue); font-size: 13px; font-weight: 600;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+    transition: var(--transition);
+  }
+  .service-link:hover { color: var(--green); gap: 8px; }
+
+  /* Sample button on service cards */
+  .service-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .btn-sample {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11.5px; font-weight: 600; padding: 6px 13px;
+    border-radius: 6px; cursor: pointer; border: none;
+    background: rgba(0,200,150,0.1); color: var(--accent2,#007a5e);
+    border: 1px solid rgba(0,200,150,0.25); transition: var(--transition);
+    text-decoration: none;
+  }
+  .btn-sample:hover { background: rgba(0,200,150,0.2); border-color: var(--green); color: #005c46; transform: translateY(-1px); }
+
+  /* ── PORTFOLIO MODAL ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 9000;
+    background: rgba(6,14,26,0.85); backdrop-filter: blur(6px);
+    align-items: center; justify-content: center; padding: 1rem;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal-box {
+    background: var(--white); border-radius: 18px;
+    width: 100%; max-width: 1000px; max-height: 90vh;
+    display: flex; flex-direction: column;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+    animation: modalIn 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+  @keyframes modalIn {
+    from { opacity:0; transform: translateY(30px) scale(0.97); }
+    to { opacity:1; transform: translateY(0) scale(1); }
+  }
+  .modal-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.4rem 2rem; border-bottom: 1px solid var(--grey-light);
+    flex-shrink: 0;
+  }
+  .modal-header-left { display: flex; flex-direction: column; gap: 2px; }
+  .modal-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--green);
+  }
+  .modal-title { font-size: 1.15rem; font-weight: 700; color: var(--navy); font-family: 'Playfair Display',serif; }
+  .modal-close {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--grey-light); border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: var(--grey-dark); transition: var(--transition);
+    flex-shrink: 0;
+  }
+  .modal-close:hover { background: #f0c0c0; color: #c62828; }
+  .modal-body {
+    overflow-y: auto; padding: 2rem;
+    flex: 1;
+  }
+  .modal-confidential {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(200,150,62,0.1); border: 1px solid rgba(200,150,62,0.35);
+    border-radius: 8px; padding: 10px 16px; margin-bottom: 1.5rem;
+    font-size: 12px; color: #7a5210; font-weight: 500;
+  }
+  .modal-confidential svg { flex-shrink: 0; }
+
+  /* ── SAMPLE CONTENT STYLES (inside modal) ── */
+  .samp-section { margin-bottom: 2rem; }
+  .samp-section h4 {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--blue);
+    border-left: 3px solid var(--green); padding-left: 10px;
+    margin-bottom: 1rem;
+  }
+  .samp-table {
+    width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 1rem;
+  }
+  .samp-table th {
+    background: var(--navy); color: #fff; padding: 8px 12px;
+    text-align: left; font-weight: 600; font-size: 11px;
+  }
+  .samp-table th:not(:first-child) { text-align: right; }
+  .samp-table td { padding: 7px 12px; border: 1px solid var(--grey-light); font-size: 12px; }
+  .samp-table td:not(:first-child) { text-align: right; font-family: monospace; }
+  .samp-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+  .samp-row-total td { background: rgba(13,27,54,0.08) !important; font-weight: 700; color: var(--navy); }
+  .samp-row-hi td { background: rgba(0,200,150,0.07) !important; font-weight: 600; color: #005c46; }
+
+  .samp-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 1rem; }
+  .samp-stat {
+    background: var(--off-white); border: 1px solid var(--grey-light);
+    border-radius: 10px; padding: 1rem; text-align: center;
+  }
+  .samp-stat .sv { font-size: 1.5rem; font-weight: 700; color: var(--navy); font-family: 'Playfair Display',serif; }
+  .samp-stat .sl { font-size: 11px; color: var(--muted,var(--grey)); margin-top: 4px; }
+  .samp-stat .sb { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; display: inline-block; margin-top: 5px; background: rgba(0,200,150,0.12); color: #005c46; }
+
+  .samp-tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    padding: 3px 10px; border-radius: 20px; margin: 3px 3px 3px 0;
+    background: var(--off-white); color: var(--grey-dark);
+    border: 1px solid var(--grey-light);
+  }
+  .samp-note {
+    font-size: 12px; color: var(--grey-dark); line-height: 1.7;
+    background: var(--off-white); border-radius: 8px; padding: 1rem 1.2rem;
+    border-left: 3px solid var(--blue); margin-bottom: 1rem;
+  }
+  .samp-result {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(30,107,79,0.08); border: 1px solid rgba(30,107,79,0.2);
+    border-radius: 8px; padding: 12px 16px; font-size: 13px;
+    font-weight: 600; color: #1a5c3a;
+  }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--off-white); }
+  .projects-header { margin-bottom: 3rem; }
+  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .project-card {
+    background: var(--white); border-radius: var(--radius); overflow: hidden;
+    border: 1px solid var(--grey-light); transition: var(--transition);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(0,200,150,0.2); }
+  .project-header {
+    padding: 1.5rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--grey-light);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .project-icon {
+    width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: #fff;
+  }
+  .project-icon.blue { background: linear-gradient(135deg, var(--blue), #0D47A1); }
+  .project-icon.green { background: linear-gradient(135deg, var(--green), #00a87a); }
+  .project-icon.teal { background: linear-gradient(135deg, #00838F, #006064); }
+  .project-icon.purple { background: linear-gradient(135deg, #7B1FA2, #6A1B9A); }
+  .project-icon.orange { background: linear-gradient(135deg, #E65100, #BF360C); }
+  .project-icon.indigo { background: linear-gradient(135deg, #303F9F, #283593); }
+  .project-meta h4 { font-size: 0.95rem; color: var(--navy); margin-bottom: 3px; font-family: 'DM Sans',sans-serif; font-weight: 600; }
+  .project-meta .type { font-size: 11px; color: var(--grey); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+  .project-body { padding: 1.2rem 1.5rem 1.5rem; }
+  .project-body p { font-size: 0.85rem; color: var(--grey-dark); line-height: 1.65; margin-bottom: 1.2rem; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+  .project-tag {
+    font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 50px;
+    background: var(--off-white); color: var(--grey-dark); border: 1px solid var(--grey-light);
+  }
+  .project-result {
+    display: flex; align-items: center; gap: 8px; padding: 10px 12px;
+    background: rgba(0,200,150,0.06); border-radius: var(--radius-sm);
+    border: 1px solid rgba(0,200,150,0.15);
+  }
+  .project-result i { color: var(--green); font-size: 14px; }
+  .project-result span { font-size: 12px; font-weight: 600; color: #007a5e; }
+
+  /* ── WHY CHOOSE US ── */
+  #why { background: var(--navy); position: relative; overflow: hidden; }
+  #why::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 30% 50%, rgba(21,101,192,0.2) 0%, transparent 60%);
+  }
+  .why-inner { position: relative; z-index: 1; }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .why-content .section-title { color: #fff; }
+  .why-content .section-desc { color: rgba(255,255,255,0.6); }
+  .why-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.2rem; }
+  .why-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 1.2rem; background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-sm);
+    transition: var(--transition);
+  }
+  .why-item:hover { background: rgba(0,200,150,0.08); border-color: rgba(0,200,150,0.25); }
+  .why-num {
+    width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--green), #00a87a);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: #fff;
+  }
+  .why-item h4 { color: #fff; font-size: 0.95rem; font-weight: 600; font-family: 'DM Sans',sans-serif; margin-bottom: 4px; }
+  .why-item p { color: rgba(255,255,255,0.55); font-size: 0.85rem; line-height: 1.6; }
+
+  .why-features {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  }
+  .feature-box {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius); padding: 1.8rem 1.5rem;
+    transition: var(--transition); text-align: center;
+  }
+  .feature-box:hover { background: rgba(0,200,150,0.1); border-color: rgba(0,200,150,0.3); transform: translateY(-3px); }
+  .feature-box i { font-size: 2rem; color: var(--green); margin-bottom: 1rem; display: block; }
+  .feature-box h4 { color: #fff; font-size: 0.9rem; font-weight: 600; font-family: 'DM Sans',sans-serif; margin-bottom: 6px; }
+  .feature-box p { color: rgba(255,255,255,0.5); font-size: 0.8rem; line-height: 1.5; }
+
+  /* ── PROCESS ── */
+  #process { background: var(--white); }
+  .process-header { text-align: center; margin-bottom: 4rem; }
+  .process-header .section-label { justify-content: center; }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute; top: 36px; left: 10%; right: 10%; height: 2px;
+    background: linear-gradient(90deg, var(--green), var(--blue-bright));
+    z-index: 0;
+  }
+  .process-step { text-align: center; padding: 0 1rem; position: relative; z-index: 1; }
+  .step-circle {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--white); border: 2.5px solid var(--grey-light);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.2rem; font-size: 22px; color: var(--grey);
+    transition: var(--transition); position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .process-step:hover .step-circle,
+  .process-step.active .step-circle {
+    border-color: var(--green); color: var(--green);
+    background: rgba(0,200,150,0.05);
+    box-shadow: 0 4px 20px rgba(0,200,150,0.2);
+  }
+  .step-num {
+    position: absolute; top: -6px; right: -6px;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--navy); color: #fff; font-size: 10px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .process-step h4 { font-size: 0.9rem; color: var(--navy); font-weight: 600; font-family: 'DM Sans',sans-serif; margin-bottom: 6px; }
+  .process-step p { font-size: 0.8rem; color: var(--grey); line-height: 1.5; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--off-white); }
+  .testimonials-header { text-align: center; margin-bottom: 3rem; }
+  .testimonials-header .section-label { justify-content: center; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .testimonial-card {
+    background: var(--white); border-radius: var(--radius);
+    padding: 2rem; border: 1px solid var(--grey-light);
+    transition: var(--transition); position: relative;
+  }
+  .testimonial-card:hover { box-shadow: var(--shadow); border-color: rgba(0,200,150,0.15); transform: translateY(-3px); }
+  .testimonial-card::before {
+    content: '\201C';
+    position: absolute; top: 12px; right: 18px;
+    font-size: 5rem; color: rgba(0,200,150,0.1);
+    font-family: 'Playfair Display',serif; line-height: 1;
+  }
+  .t-stars { color: var(--gold); font-size: 13px; margin-bottom: 1rem; letter-spacing: 2px; }
+  .t-text { font-size: 0.9rem; color: var(--grey-dark); line-height: 1.75; margin-bottom: 1.5rem; font-style: italic; }
+  .t-author { display: flex; align-items: center; gap: 12px; }
+  .t-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px; color: #fff; flex-shrink: 0;
+  }
+
+  /* ── LIVE FEEDBACK ── */
+  #feedback { background: var(--white); }
+  .feedback-header { text-align: center; margin-bottom: 3rem; }
+  .feedback-header .section-label { justify-content: center; }
+
+  .feedback-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 3rem; align-items: start; }
+
+  /* Submit Form */
+  .feedback-form-box {
+    background: var(--navy);
+    border-radius: 20px; padding: 2rem;
+    position: sticky; top: 90px;
+  }
+  .feedback-form-box h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.4rem; font-family: 'DM Sans',sans-serif; font-weight: 600; }
+  .feedback-form-box p { color: rgba(255,255,255,0.5); font-size: 0.82rem; margin-bottom: 1.5rem; }
+
+  .star-select { display: flex; gap: 6px; margin-bottom: 1.2rem; }
+  .star-select span {
+    font-size: 1.6rem; cursor: pointer; color: rgba(255,255,255,0.2);
+    transition: var(--transition); user-select: none;
+  }
+  .star-select span.active, .star-select span.hover { color: var(--gold); }
+
+  .fb-input {
+    width: 100%; background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12); border-radius: 10px;
+    color: #fff; font-family: 'DM Sans',sans-serif; font-size: 0.875rem;
+    padding: 12px 14px; margin-bottom: 10px; transition: var(--transition);
+    outline: none; resize: none;
+  }
+  .fb-input::placeholder { color: rgba(255,255,255,0.3); }
+  .fb-input:focus { border-color: var(--green); background: rgba(0,200,150,0.07); }
+
+  .fb-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .fb-submit {
+    width: 100%; padding: 13px;
+    background: linear-gradient(135deg, var(--green), #00a87a);
+    border: none; border-radius: 10px; color: #fff;
+    font-family: 'DM Sans',sans-serif; font-size: 0.9rem; font-weight: 600;
+    cursor: pointer; transition: var(--transition); margin-top: 6px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .fb-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,200,150,0.4); }
+  .fb-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  /* Feed */
+  .feedback-feed { display: flex; flex-direction: column; gap: 1rem; }
+  .feed-top {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  .feed-top h3 { font-family: 'DM Sans',sans-serif; font-size: 1rem; font-weight: 600; color: var(--navy); }
+  .feed-count {
+    background: var(--green); color: #fff; font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 50px;
+  }
+
+  .feedback-item {
+    background: var(--white); border: 1px solid var(--grey-light);
+    border-radius: var(--radius); padding: 1.4rem;
+    transition: var(--transition); position: relative;
+    animation: feedIn 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  @keyframes feedIn {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .feedback-item:hover { box-shadow: var(--shadow); border-color: rgba(0,200,150,0.2); }
+
+  .fi-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.7rem; }
+  .fi-author { display: flex; align-items: center; gap: 10px; }
+  .fi-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px; color: #fff; flex-shrink: 0;
+  }
+  .fi-name { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 1px; }
+  .fi-meta { font-size: 11px; color: var(--grey); }
+  .fi-stars { color: var(--gold); font-size: 12px; letter-spacing: 1px; }
+
+  .fi-text { font-size: 0.875rem; color: var(--grey-dark); line-height: 1.7; margin-bottom: 1rem; }
+
+  .fi-actions { display: flex; gap: 8px; }
+  .fi-btn {
+    font-size: 12px; font-weight: 500; padding: 5px 12px;
+    border-radius: 6px; cursor: pointer; transition: var(--transition);
+    display: inline-flex; align-items: center; gap: 5px; border: none;
+  }
+  .fi-edit {
+    background: rgba(21,101,192,0.1); color: var(--blue);
+  }
+  .fi-edit:hover { background: rgba(21,101,192,0.2); }
+  .fi-delete {
+    background: rgba(229,57,53,0.09); color: #c62828;
+  }
+  .fi-delete:hover { background: rgba(229,57,53,0.18); }
+  .fi-helpful {
+    background: rgba(0,200,150,0.08); color: #007a5e;
+  }
+  .fi-helpful:hover { background: rgba(0,200,150,0.18); }
+
+  /* Edit mode */
+  .fi-edit-box { display: none; margin-top: 0.8rem; }
+  .fi-edit-box.show { display: block; }
+  .fi-edit-input {
+    width: 100%; border: 1px solid var(--green); border-radius: 8px;
+    padding: 10px 12px; font-family: 'DM Sans',sans-serif;
+    font-size: 0.875rem; color: var(--text); resize: none;
+    outline: none; margin-bottom: 8px;
+  }
+  .fi-save {
+    background: var(--green); color: #fff; border: none; border-radius: 7px;
+    padding: 7px 16px; font-size: 12px; font-weight: 600; cursor: pointer;
+    transition: var(--transition); margin-right: 6px;
+  }
+  .fi-save:hover { background: #00a87a; }
+  .fi-cancel {
+    background: var(--grey-light); color: var(--grey-dark); border: none;
+    border-radius: 7px; padding: 7px 16px; font-size: 12px; cursor: pointer;
+  }
+
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(0,200,150,0.1); border: 1px solid rgba(0,200,150,0.25);
+    color: #007a5e; font-size: 11px; font-weight: 600; padding: 4px 12px;
+    border-radius: 50px; margin-left: 10px;
+  }
+  .live-dot {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+    animation: pulse-dot 1.5s infinite;
+  }
+  @keyframes pulse-dot {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+  .empty-feed {
+    text-align: center; padding: 3rem 1rem; color: var(--grey);
+  }
+  .empty-feed svg { opacity: 0.3; margin-bottom: 0.8rem; }
+  .empty-feed p { font-size: 0.9rem; }
+  .t-avatar.blue { background: linear-gradient(135deg, var(--blue), var(--blue-bright)); }
+  .t-avatar.green { background: linear-gradient(135deg, var(--green), #00a87a); }
+  .t-avatar.navy { background: linear-gradient(135deg, var(--navy-light), var(--navy)); }
+  .t-author-info h5 { font-size: 0.9rem; color: var(--navy); font-weight: 600; font-family: 'DM Sans',sans-serif; }
+  .t-author-info p { font-size: 0.78rem; color: var(--grey); }
+
+  /* ── FAQ ── */
+  #faq { background: var(--white); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+  .faq-sidebar .section-desc { margin-bottom: 2rem; }
+  .faq-contact {
+    background: var(--navy); border-radius: var(--radius);
+    padding: 2rem; color: #fff;
+  }
+  .faq-contact h4 { font-size: 1.1rem; margin-bottom: 0.7rem; }
+  .faq-contact p { color: rgba(255,255,255,0.6); font-size: 0.875rem; margin-bottom: 1.5rem; }
+  .faq-contact-links { display: flex; flex-direction: column; gap: 10px; }
+  .faq-contact-link {
+    display: flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,0.75); font-size: 14px; text-decoration: none;
+    padding: 10px 12px; background: rgba(255,255,255,0.06); border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08); transition: var(--transition);
+  }
+  .faq-contact-link:hover { background: rgba(0,200,150,0.15); color: var(--green); border-color: rgba(0,200,150,0.3); }
+  .faq-contact-link i { color: var(--green); width: 16px; text-align: center; }
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    border: 1.5px solid var(--grey-light); border-radius: var(--radius-sm);
+    overflow: hidden; transition: var(--transition);
+  }
+  .faq-item.open { border-color: rgba(0,200,150,0.3); }
+  .faq-q {
+    width: 100%; background: none; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 1.3rem; text-align: left; gap: 1rem;
+  }
+  .faq-q span { font-size: 0.93rem; font-weight: 600; color: var(--navy); }
+  .faq-icon {
+    width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0;
+    background: var(--off-white); display: flex; align-items: center; justify-content: center;
+    color: var(--grey); font-size: 12px; transition: var(--transition);
+  }
+  .faq-item.open .faq-icon { background: rgba(0,200,150,0.12); color: var(--green); }
+  .faq-a {
+    padding: 0 1.3rem 1.1rem; font-size: 0.875rem; color: var(--grey-dark); line-height: 1.75;
+    display: none;
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--navy); position: relative; overflow: hidden; }
+  #contact::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(0,200,150,0.12) 0%, transparent 60%);
+  }
+  .contact-inner { position: relative; z-index: 1; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
+  .contact-info .section-title { color: #fff; }
+  .contact-info .section-desc { color: rgba(255,255,255,0.6); margin-bottom: 2.5rem; }
+  .contact-details { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+  .contact-detail {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px; background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-sm);
+    text-decoration: none; transition: var(--transition);
+  }
+  .contact-detail:hover { background: rgba(0,200,150,0.1); border-color: rgba(0,200,150,0.3); }
+  .contact-detail-icon {
+    width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+    background: rgba(0,200,150,0.15); display: flex; align-items: center; justify-content: center;
+    color: var(--green); font-size: 16px;
+  }
+  .contact-detail-info label { color: rgba(255,255,255,0.45); font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; display: block; }
+  .contact-detail-info span { color: #fff; font-size: 0.95rem; font-weight: 500; }
+
+  .social-row { display: flex; gap: 10px; }
+  .social-link {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.6); text-decoration: none; font-size: 16px;
+    transition: var(--transition);
+  }
+  .social-link:hover { background: rgba(0,200,150,0.15); color: var(--green); border-color: rgba(0,200,150,0.3); }
+
+  /* Contact form */
+  .contact-form-box {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 2.5rem;
+    backdrop-filter: blur(20px);
+  }
+  .form-title { color: #fff; font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .form-sub { color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-bottom: 2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label { display: block; color: rgba(255,255,255,0.65); font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; background: rgba(255,255,255,0.07);
+    border: 1.5px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm);
+    color: #fff; font-size: 14px; font-family: 'DM Sans',sans-serif;
+    padding: 12px 14px; outline: none; transition: var(--transition);
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--green); background: rgba(0,200,150,0.06);
+  }
+  .form-group select option { background: var(--navy); color: #fff; }
+  .form-group textarea { height: 110px; resize: vertical; }
+  .form-submit {
+    width: 100%; padding: 14px; border-radius: 50px;
+    background: linear-gradient(135deg, var(--green), #00a87a);
+    color: #fff; font-size: 15px; font-weight: 600;
+    border: none; cursor: pointer; transition: var(--transition);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-family: 'DM Sans',sans-serif;
+  }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,200,150,0.4); }
+  .form-success {
+    display: none; text-align: center; padding: 2rem;
+    color: var(--green); font-size: 1.1rem; font-weight: 600;
+  }
+  .form-success i { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+  /* ── FOOTER ── */
+  footer { background: #060e1a; padding: 60px 0 0; }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem;
+    padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .footer-brand .logo { margin-bottom: 1.2rem; }
+  .footer-brand p { color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.75; margin-bottom: 1.5rem; max-width: 280px; }
+  .footer-h { color: #fff; font-size: 14px; font-weight: 600; margin-bottom: 1.2rem; font-family: 'DM Sans',sans-serif; letter-spacing: 0.5px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .footer-links a { color: rgba(255,255,255,0.45); font-size: 13.5px; text-decoration: none; transition: var(--transition); }
+  .footer-links a:hover { color: var(--green); padding-left: 4px; }
+  .footer-contact-item { display: flex; gap: 10px; color: rgba(255,255,255,0.5); font-size: 13.5px; margin-bottom: 10px; }
+  .footer-contact-item i, .footer-contact-item .ico { color: var(--green); margin-top: 2px; flex-shrink: 0; }
+  .footer-contact-item a { color: inherit; text-decoration: none; }
+  .footer-contact-item a:hover { color: var(--green); }
+  a.footer-contact-item { color: rgba(255,255,255,0.5); text-decoration: none; cursor: pointer !important; pointer-events: all !important; }
+  a.footer-contact-item:hover { color: var(--green); }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 0; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.3); font-size: 13px; }
+  .footer-bottom-links { display: flex; gap: 1.5rem; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.3); font-size: 13px; text-decoration: none; transition: var(--transition); }
+  .footer-bottom-links a:hover { color: var(--green); }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 999;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #25D366; color: #fff; font-size: 26px;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; box-shadow: 0 4px 25px rgba(37,211,102,0.5);
+    transition: var(--transition); animation: pulse-whatsapp 2.5s infinite;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 35px rgba(37,211,102,0.6); }
+  @keyframes pulse-whatsapp {
+    0%,100% { box-shadow: 0 4px 25px rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 4px 35px rgba(37,211,102,0.75), 0 0 0 10px rgba(37,211,102,0.08); }
+  }
+
+  /* ── TOP RIBBON ── */
+  .top-ribbon {
+    background: linear-gradient(90deg, var(--navy-mid), var(--navy-light));
+    padding: 8px 2rem;
+    display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;
+    font-size: 12.5px; color: rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .ribbon-item { display: flex; align-items: center; gap: 6px; }
+  .ribbon-item i { color: var(--green); font-size: 12px; }
+  .ribbon-item a { color: inherit; text-decoration: none; }
+  .ribbon-item a:hover { color: var(--green); }
+  a.ribbon-item { color: rgba(255,255,255,0.7); text-decoration: none; cursor: pointer !important; pointer-events: all !important; }
+  a.ribbon-item:hover { color: var(--green); }
+
+  /* ── MOBILE NAV ── */
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links {
+      display: none; flex-direction: column; gap: 4px;
+      position: absolute; top: 70px; left: 0; right: 0;
+      background: rgba(10,22,40,0.98); padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 10px 14px; font-size: 15px; }
+    .top-ribbon { gap: 1rem; font-size: 11px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 3rem; padding-top: 120px; }
+    .hero-card { display: none; }
+    .about-grid, .why-grid, .faq-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .float-badge { display: none; }
+    .services-grid, .projects-grid, .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .process-steps::before { display: none; }
+    .why-features { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 520px) {
+    .services-grid, .projects-grid, .testimonials-grid { grid-template-columns: 1fr; }
+    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+    .about-highlights { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .why-features { grid-template-columns: 1fr; }
+  }
+
+  /* Fade in animation */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: none; }
+
+  .ico {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .ico svg, .service-icon svg, .highlight-icon svg, .step-circle svg,
+  .project-icon svg, .contact-detail-icon svg, .social-link svg,
+  .ribbon-item svg, .faq-contact-link svg, .feature-box svg,
+  .contact-item svg, .why-num svg, .btn-primary svg, .btn-outline svg,
+  .form-submit svg, .nav-cta svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .feature-box > svg {
+    width: 2rem; height: 2rem;
+    display: block; margin: 0 auto 1rem;
+    color: var(--green);
+  }
+  .step-circle svg { width: 1.4rem; height: 1.4rem; }
+  .service-icon svg { width: 1.5rem; height: 1.5rem; }
+  .highlight-icon svg { width: 1.1rem; height: 1.1rem; }
+  .project-icon svg { width: 1.4rem; height: 1.4rem; }
+  .contact-detail-icon svg { width: 1.1rem; height: 1.1rem; }
+  .social-link svg { width: 1rem; height: 1rem; }
+  .ribbon-item svg { width: 13px; height: 13px; vertical-align: middle; }
+  .contact-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .faq-contact-link svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .whatsapp-float svg { width: 1.7rem; height: 1.7rem; }
+  .btn-primary svg, .btn-outline svg, .form-submit svg { width: 1em; height: 1em; }
+  .hero-badge svg { width: 11px; height: 11px; }
+
+</style>
+</head>
+<body>
+
+<!-- TOP RIBBON -->
+<div class="top-ribbon">
+  <a class="ribbon-item" href="tel:+918949276571" onclick="window.location.href='tel:+918949276571';return false;" style="text-decoration:none;cursor:pointer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>+91 8949276571</a>
+  <a class="ribbon-item" href="mailto:camadhav26@gmail.com" onclick="window.location.href='mailto:camadhav26@gmail.com';return false;" style="text-decoration:none;cursor:pointer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>camadhav26@gmail.com</a>
+  <div class="ribbon-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 11H11V7h1.5v5.25l4.5 2.67-.75 1.23L12.5 13z"/></svg> Mon–Sat: 9 AM – 7 PM</div>
+  <div class="ribbon-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg> 100% Confidential & Secure</div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">TC</div>
+      <div class="logo-text">
+        <span class="logo-name">TaxCrest</span>
+        <span class="logo-tagline">Advisory & Accounting Services</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Book Consultation</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner container">
+    <div class="hero-text">
+      <div class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> Trusted Financial Consultant</div>
+      <h1>Smart Tax &<br><span>Financial Solutions</span><br>For Your Business</h1>
+      <p class="hero-sub">Expert guidance in Income Tax, GST, TDS, CMA Data, Project Reports, Accounting and Excel services — by TaxCrest Advisory and Accounting Services. Reliable. Accurate. Confidential.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zm-7-9l-3.5 3.5L7 12l-1.41 1.41L8.5 16.5 13.5 11.5z" clip-rule="evenodd"/></svg> Book Consultation</a>
+        <a href="https://wa.me/918949276571" class="btn-outline" target="_blank"><span style="background:#25D366;color:#fff;border-radius:4px;padding:1px 4px;font-size:11px;font-weight:700;font-style:normal;line-height:1">WA</span> WhatsApp Now</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">500<span>+</span></div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">6<span>+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">1200<span>+</span></div>
+          <div class="stat-label">Returns Filed</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-profile">
+        <div class="profile-avatar">M</div>
+        <div class="profile-info">
+          <h3>TaxCrest</h3>
+          <p>Advisory & Accounting Services</p>
+        </div>
+        <div class="profile-verified"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Verified Pro</div>
+      </div>
+      <div class="service-pills">
+        <span class="pill active">Income Tax</span>
+        <span class="pill">GST Filing</span>
+        <span class="pill">TDS</span>
+        <span class="pill">CMA Data</span>
+        <span class="pill">Project Reports</span>
+        <span class="pill">Bookkeeping</span>
+        <span class="pill">Accounting</span>
+        <span class="pill">Excel Services</span>
+        <span class="pill">Business Reg.</span>
+      </div>
+      <div class="rating-row">
+        <span class="stars">★★★★★</span>
+        <span class="rating-text"><strong>4.9/5</strong> · Based on 120+ client reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-card-main">
+          <div class="about-initials">TC</div>
+          <h3>Manoj Sharma</h3>
+          <p class="designation">TaxCrest Advisory & Accounting Services</p>
+          <div class="about-expertise">
+            <span class="expertise-tag">Income Tax</span>
+            <span class="expertise-tag">GST</span>
+            <span class="expertise-tag">TDS</span>
+            <span class="expertise-tag">CMA Data</span>
+            <span class="expertise-tag">Project Report</span>
+            <span class="expertise-tag">Accounting</span>
+          </div>
+          <div class="contact-quick">
+            <a class="contact-item" href="tel:+918949276571" onclick="window.location.href='tel:+918949276571';return false;" style="text-decoration:none;cursor:pointer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>+91 8949276571</a>
+            <a class="contact-item" href="mailto:camadhav26@gmail.com" onclick="window.location.href='mailto:camadhav26@gmail.com';return false;" style="text-decoration:none;cursor:pointer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>camadhav26@gmail.com</a>
+            <a class="contact-item" href="https://wa.me/918949276571" target="_blank" style="text-decoration:none;cursor:pointer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Chat on WhatsApp</a>
+          </div>
+        </div>
+        <div class="float-badge">
+          <div class="num">6+</div>
+          <div class="lbl">Years of<br>Excellence</div>
+        </div>
+      </div>
+      <div class="about-content fade-up">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">TaxCrest — Your Partner in Tax, Accounts & <span>Financial Advisory</span></h2>
+        <p>I am Manoj Sharma, founder of TaxCrest Advisory and Accounting Services, with over 6 years of hands-on experience in accounting, taxation, and financial services. We help individuals, businesses, startups and MSMEs navigate complex tax laws with confidence.</p>
+        <p>My practice covers everything from Income Tax Return filing and GST compliance to CMA Data preparation for bank loans, detailed project reports, TDS management, and complete bookkeeping solutions — all delivered with accuracy, speed, and strict confidentiality.</p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+            <div><h4>Tax Compliance</h4><p>ITR, GST & TDS filing with zero errors</p></div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/></svg></div>
+            <div><h4>CMA & Project Reports</h4><p>Bank loan documentation expertise</p></div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+            <div><h4>Data Confidentiality</h4><p>Your financial data is always secure</p></div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1C7 1 3 5 3 10v7c0 1.66 1.34 3 3 3h1v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-2v8h1c1.66 0 3-1.34 3-3v-7c0-5-4-9-9-9z"/></svg></div>
+            <div><h4>Ongoing Support</h4><p>Year-round guidance and assistance</p></div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary" style="display:inline-flex;margin-top:0.5rem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M11 13.5l-2-2-4 4 2 2 4-4zm9.5-9.5h-5l-1-1h-5l-1 1H3v2h18v-2zm-1 4H13l-1 1h-2l-1-1H3.5L2 14h2.5l1 5h3l1-5h3l1 5h3l1-5H20l1.5-6H19.5z"/></svg> Let's Work Together
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="services-header fade-up">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Comprehensive <span>Financial Services</span></h2>
+      <p class="section-desc">End-to-end accounting, tax and financial solutions tailored to your specific business needs.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg></div>
+        <h3>Accounting & Bookkeeping</h3>
+        <p>Accurate day-to-day bookkeeping, ledger maintenance, bank reconciliation, Tally/Busy entries, and complete financial statement preparation.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Get Started <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('accounting')">📄 View Sample</button>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11C9.43 11 11 9.43 11 7.5S9.43 4 7.5 4 4 5.57 4 7.5 5.57 11 7.5 11zm0-5C8.33 6 9 6.67 9 7.5S8.33 9 7.5 9 6 8.33 6 7.5 6.67 6 7.5 6zM4.0 20h2l14-16h-2L4 20zm12.5-5C14.57 15 13 16.57 13 18.5S14.57 22 16.5 22 20 20.43 20 18.5 18.43 15 16.5 15zm0 5c-.83 0-1.5-.67-1.5-1.5S15.67 17 16.5 17s1.5.67 1.5 1.5S17.33 20 16.5 20z"/></svg></div>
+        <h3>GST Registration & Filing</h3>
+        <p>New GST registration, GSTR-1, GSTR-3B, GSTR-9 filing, reconciliation, notices handling and full compliance management.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Get GST Support <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('gst')">📄 View Sample</button>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm2-5h8v2H8v-2zm0-4h8v2H8v-2z"/></svg></div>
+        <h3>Income Tax Filing</h3>
+        <p>ITR filing for individuals, salaried employees, businesses, firms and companies. Tax planning and notice response services included.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">File Your ITR <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('itr')">📄 View Sample</button>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 3.5L18 2l-1.5 1.5L15 2l-1.5 1.5L12 2l-1.5 1.5L9 2 7.5 3.5 6 2v14H3v3c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3V2l-1.5 1.5zM19 19c0 .55-.45 1-1 1s-1-.45-1-1v-3H8V5h11v14z"/><path d="M9 7h6v2H9zm0 4h6v2H9z"/></svg></div>
+        <h3>TDS Services</h3>
+        <p>TDS deduction, deposit, quarterly return filing (24Q, 26Q, 27Q), Form 16/16A generation, and default notices resolution.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Manage TDS <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('tds')">📄 View Sample</button>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M3.5 18.5l6-6 4 4L22 6.92 20.59 5.5l-7.09 8-4-4L2 17l1.5 1.5z"/></svg></div>
+        <h3>CMA Data Preparation</h3>
+        <p>Comprehensive Credit Monitoring Arrangement (CMA) data reports for bank loans — fund flow, cash flow, projections, and ratio analysis.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Get CMA Report <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('cma')" style="background:rgba(21,101,192,0.1);border-color:rgba(21,101,192,0.3);color:var(--blue)">📊 View Portfolio</button>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div>
+        <h3>Project Reports</h3>
+        <p>Detailed project reports for MSME, startup loans, Mudra, PMEGP and bank financing — covering techno-economic viability and DPR.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Request Report <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('project')">📄 View Sample</button>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zm-8 4H7v-2h2v2zm0-4H7V9h2v2zm0-4H7V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2z"/></svg></div>
+        <h3>Business Registration</h3>
+        <p>Sole proprietorship, partnership, LLP, Pvt. Ltd company registration, Udyam/MSME registration and FSSAI licensing.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Register Business <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('biznreg')">📄 View Sample</button>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L2 9v2h20V9L12 3zM6 11v8H4v2h16v-2h-2v-8h-2v8h-2v-8h-2v8h-2v-8H6z"/></svg></div>
+        <h3>Loan Documentation</h3>
+        <p>Complete loan file preparation including financial statements, projected P&L, balance sheet, bank statements compilation for CC/OD/term loans.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Prepare Docs <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('loan')">📄 View Sample</button>
+        </div>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M10 10.02h5V21h-5zM17 21h3c1.1 0 2-.9 2-2v-9h-5v11zm3-18H5c-1.1 0-2 .9-2 2v3h19V5c0-1.1-.9-2-2-2zM3 19c0 1.1.9 2 2 2h3V10H3v9z"/></svg></div>
+        <h3>Excel Services</h3>
+        <p>Custom Excel spreadsheets, financial models, MIS dashboards, pivot tables, automated reports, data analysis and business-specific Excel templates.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Get Excel Support <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('excel')">📄 View Sample</button>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15c0 1.1-.9 2-2 2H7l-4 4V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v10z"/></svg></div>
+        <h3>Financial Consultation</h3>
+        <p>Personalised financial advisory for tax saving, investment planning, business structuring and profit optimization strategies.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Book Session <span style="font-style:normal">→</span></a>
+          <button class="btn-sample" onclick="openModal('consult')">📄 View Sample</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="projects-header fade-up">
+      <div class="section-label">Sample Work Done</div>
+      <h2 class="section-title">Real <span>Client Projects</span></h2>
+      <p class="section-desc">A selection of actual projects handled — demonstrating expertise across diverse sectors and financial requirements.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <div class="project-icon blue"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2l-2 5v2h2v7h12v-7h2v7h2v-7h2v-2l-2-5V4zm-6 14H8v-5h6v5zm-8.3-7l1.5-4h13.6l1.5 4H5.7z"/></svg></div>
+          <div class="project-meta">
+            <h4>Retail Business — CMA Data</h4>
+            <div class="type">CMA Data · Bank Loan</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p>Prepared a complete CMA data package for a Jaipur-based grocery retailer seeking a ₹25 lakh CC limit from SBI. Included 3-year financial projections, cash flow analysis, fund flow statement, and ratio analysis.</p>
+          <div class="project-tags">
+            <span class="project-tag">CMA Data</span>
+            <span class="project-tag">SBI</span>
+            <span class="project-tag">CC Limit</span>
+            <span class="project-tag">Retail</span>
+          </div>
+          <div class="project-result"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>Loan sanctioned within 3 weeks</span></div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <div class="project-icon green"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20.7 16H3.3C2.6 16 2 16.6 2 17.3v1.4C2 19.4 2.6 20 3.3 20h17.4c.7 0 1.3-.6 1.3-1.3v-1.4c0-.7-.6-1.3-1.3-1.3zM5 14h14c0-4-2.5-7.4-6-8.7V4c0-.6-.4-1-1-1s-1 .4-1 1v1.3C7.5 6.6 5 10 5 14z"/></svg></div>
+          <div class="project-meta">
+            <h4>Construction Firm — Project Report</h4>
+            <div class="type">Project Report · MSME Loan</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p>Drafted a detailed project report for a construction contractor applying for ₹50 lakh term loan under the MSME scheme. Covered DPR, cost of project, means of finance, and profitability projections for 5 years.</p>
+          <div class="project-tags">
+            <span class="project-tag">DPR</span>
+            <span class="project-tag">MSME</span>
+            <span class="project-tag">Construction</span>
+            <span class="project-tag">5-Year Plan</span>
+          </div>
+          <div class="project-result"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>Term loan approved — ₹48 lakh sanctioned</span></div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <div class="project-icon teal"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6zm5.46 8.88L8.5 13.94l2.06-2.06L9.15 10.5l-3 3 3 3 1.31-1.62zm5.08 0l3-3-3-3-1.31 1.62 1.5.94-2.06 2.06.94.94z"/></svg></div>
+          <div class="project-meta">
+            <h4>IT Startup — GST + ITR Filing</h4>
+            <div class="type">GST · Income Tax</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p>Managed complete GST compliance (GSTR-1 & GSTR-3B monthly filing) and ITR-3 filing for a tech startup in Rajasthan. Handled a GST notice for mismatch and resolved it with reconciliation and response filing.</p>
+          <div class="project-tags">
+            <span class="project-tag">GSTR-3B</span>
+            <span class="project-tag">GSTR-1</span>
+            <span class="project-tag">ITR-3</span>
+            <span class="project-tag">Notice Reply</span>
+          </div>
+          <div class="project-result"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>Notice resolved — penalty waived</span></div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <div class="project-icon purple"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-3.5-4.58-4.99-8.44-4.99-3.86 0-8.44 1.5-8.44 5v.99H15.03V15z"/></svg></div>
+          <div class="project-meta">
+            <h4>Restaurant — PMEGP Project Report</h4>
+            <div class="type">Project Report · PMEGP</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p>Prepared a PMEGP project report for a new restaurant venture seeking subsidy-linked financing of ₹15 lakh. Included machinery cost, working capital requirement, employment potential and market analysis.</p>
+          <div class="project-tags">
+            <span class="project-tag">PMEGP</span>
+            <span class="project-tag">Subsidy</span>
+            <span class="project-tag">Restaurant</span>
+            <span class="project-tag">Market Analysis</span>
+          </div>
+          <div class="project-result"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>₹15 lakh loan + 25% subsidy availed</span></div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <div class="project-icon orange"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7.99L15 4V7L8 4v3L1 4v18h22V8l-1-.01zM7 18H5v-2h2v2zm0-4H5v-2h2v2zm4 4H9v-2h2v2zm0-4H9v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg></div>
+          <div class="project-meta">
+            <h4>Manufacturing Unit — TDS Compliance</h4>
+            <div class="type">TDS · Compliance</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p>Took over TDS compliance for a Jodhpur manufacturing company with 40+ employees and multiple contractors. Filed pending 24Q and 26Q returns, generated Form 16 for all employees and resolved late filing defaults.</p>
+          <div class="project-tags">
+            <span class="project-tag">24Q</span>
+            <span class="project-tag">26Q</span>
+            <span class="project-tag">Form 16</span>
+            <span class="project-tag">Default Resolution</span>
+          </div>
+          <div class="project-result"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>₹1.8 lakh default interest waived</span></div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <div class="project-icon indigo"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm0-8.5c.83 0 1.5.67 1.5 1.5S12.83 8.5 12 8.5 10.5 7.83 10.5 7s.67-1.5 1.5-1.5zM10 17l2-3 2 3-1 3h-2l-1-3z"/></svg></div>
+          <div class="project-meta">
+            <h4>Salaried Professional — ITR + Tax Planning</h4>
+            <div class="type">Income Tax · Planning</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p>Handled ITR-1 and ITR-2 filing for a senior government employee with salary, house property, and capital gains income. Provided tax planning advice resulting in maximized 80C, 80D deductions and optimized tax liability.</p>
+          <div class="project-tags">
+            <span class="project-tag">ITR-2</span>
+            <span class="project-tag">Capital Gains</span>
+            <span class="project-tag">Tax Planning</span>
+            <span class="project-tag">80C/80D</span>
+          </div>
+          <div class="project-result"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>Saved ₹42,000 in tax legally</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="container why-inner">
+    <div class="why-grid">
+      <div class="why-content fade-up">
+        <div class="section-label" style="color:rgba(0,200,150,0.9)">Why Choose Me</div>
+        <h2 class="section-title">Professional, Reliable &<br><span style="color:var(--green)">Client-First Approach</span></h2>
+        <p class="section-desc">When it comes to your finances, you deserve a consultant who is accurate, responsive and genuinely invested in your growth.</p>
+        <div class="why-list">
+          <div class="why-item"><div class="why-num">01</div><div><h4>End-to-End Service</h4><p>From registration to filing to compliance — I handle everything so you can focus on running your business.</p></div></div>
+          <div class="why-item"><div class="why-num">02</div><div><h4>Timely & Accurate Filings</h4><p>Zero late filings. Every return is submitted well within deadlines, avoiding penalties and interest.</p></div></div>
+          <div class="why-item"><div class="why-num">03</div><div><h4>Affordable & Transparent Pricing</h4><p>Clear pricing with no hidden costs. Quality professional service accessible for businesses of all sizes.</p></div></div>
+          <div class="why-item"><div class="why-num">04</div><div><h4>Strict Confidentiality</h4><p>Your financial data and business information are treated with the highest level of privacy and security.</p></div></div>
+        </div>
+      </div>
+      <div class="why-features fade-up">
+        <div class="feature-box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg><h4>Fast Turnaround</h4><p>Most tasks completed within 24–48 hours of document receipt</p></div>
+        <div class="feature-box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1C7 1 3 5 3 10v7c0 1.66 1.34 3 3 3h1v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-2v8h1c1.66 0 3-1.34 3-3v-7c0-5-4-9-9-9z"/></svg><h4>Dedicated Support</h4><p>Direct access via phone, WhatsApp and email — always available</p></div>
+        <div class="feature-box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M17 2.98L13 1v5.5l4 2V2.98zm0 12.52c0 1.38-1.12 2.5-2.5 2.5S12 16.88 12 15.5h-2c0 2.49 2.01 4.5 4.5 4.5s4.5-2.01 4.5-4.5V9h-2v6.5zm-6-10L7 2.98V8.5l4-2V5.5zM9.5 18c-1.38 0-2.5-1.12-2.5-2.5H5c0 2.49 2.01 4.5 4.5 4.5S14 17.99 14 15.5h-2c0 1.38-1.12 2.5-2.5 2.5zM12 8l-4 2 4 2 4-2-4-2zM4 22h16v-2H4v2z"/></svg><h4>Notice Handling</h4><p>Experienced in handling IT, GST and TDS notices effectively</p></div>
+        <div class="feature-box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M11 2v20c-5.07-.5-9-4.79-9-10s3.93-9.5 9-10zm2.03 0v8.99H22c-.47-4.74-4.24-8.52-8.97-8.99zm0 11.01V22c4.74-.47 8.5-4.25 8.97-8.99h-8.97z"/></svg><h4>Business Advisory</h4><p>Beyond compliance — strategic financial planning for growth</p></div>
+        <div class="feature-box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg><h4>Complete Documentation</h4><p>Proper record-keeping and organized filing for audit readiness</p></div>
+        <div class="feature-box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg><h4>500+ Satisfied Clients</h4><p>Track record across MSMEs, startups, traders and professionals</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="process-header fade-up">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Simple <span>5-Step Process</span></h2>
+      <p class="section-desc" style="margin:0 auto">Getting started is easy. Here's how we work together from inquiry to completion.</p>
+    </div>
+    <div class="process-steps fade-up">
+      <div class="process-step active">
+        <div class="step-circle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg><span class="step-num">1</span></div>
+        <h4>Initial Enquiry</h4>
+        <p>Call, WhatsApp or email with your requirement</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg><span class="step-num">2</span></div>
+        <h4>Requirement Assessment</h4>
+        <p>We discuss your needs and collect documents</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><span class="step-num">3</span></div>
+        <h4>Document Review</h4>
+        <p>Thorough analysis and preparation begins</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg><span class="step-num">4</span></div>
+        <h4>Processing & Filing</h4>
+        <p>Accurate filing or report preparation with review</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M.41 13.41L6 19l1.41-1.42L1.83 12 .41 13.41zm22.99-9.8l-1.4-1.4-9.59 9.62-4-4.02-1.42 1.4 5.4 5.43 11.01-11.03zM17.99 5.6L13 10.6l-1.4-1.42 5-5.01L17.99 5.6z"/></svg><span class="step-num">5</span></div>
+        <h4>Delivery & Support</h4>
+        <p>Final delivery with acknowledgments and follow-up</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header fade-up">
+      <div class="section-label">Client Reviews</div>
+      <h2 class="section-title">What <span>Clients Say</span></h2>
+      <p class="section-desc" style="margin:0 auto">Real feedback from businesses and individuals I've had the privilege of serving.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">Manoj sir handled our GST filing and TDS compliance with great professionalism. Always timely and very responsive. We never had a late filing in 3 years of working together.</p>
+        <div class="t-author">
+          <div class="t-avatar blue">R</div>
+          <div class="t-author-info"><h5>Ramesh Agarwal</h5><p>Proprietor, Agarwal Traders, Jaipur</p></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">The CMA data and project report prepared by Manoj ji was so thorough that our bank manager specifically appreciated the documentation. Our ₹40 lakh loan was sanctioned without any issues.</p>
+        <div class="t-author">
+          <div class="t-avatar green">S</div>
+          <div class="t-author-info"><h5>Sunita Meena</h5><p>Director, Meena Constructions, Jodhpur</p></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">I was confused about income tax on my mutual fund gains. Manoj sir explained everything clearly and saved me a significant amount through proper tax planning. Highly recommended!</p>
+        <div class="t-author">
+          <div class="t-avatar navy">A</div>
+          <div class="t-author-info"><h5>Ankita Sharma</h5><p>Software Engineer, Pune</p></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">We had a pending GST notice for 2 years. Manoj sir took over, prepared the reconciliation and filed the reply. The notice was dropped within 45 days. Excellent work!</p>
+        <div class="t-author">
+          <div class="t-avatar blue">V</div>
+          <div class="t-author-info"><h5>Vikram Singh</h5><p>Owner, VS Electronics, Ajmer</p></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">Got my PMEGP project report done for my food processing unit. Very detailed and accurate. The loan got approved and I also got 25% subsidy. Thank you Manoj ji!</p>
+        <div class="t-author">
+          <div class="t-avatar green">K</div>
+          <div class="t-author-info"><h5>Kamlesh Patel</h5><p>Food Entrepreneur, Udaipur</p></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">Our company's monthly bookkeeping and quarterly GST is managed by Manoj sir. Very organized, transparent and always keeps us updated. Best financial consultant we've worked with.</p>
+        <div class="t-author">
+          <div class="t-avatar navy">P</div>
+          <div class="t-author-info"><h5>Priya Joshi</h5><p>Co-Founder, TechServ India, Rajasthan</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE CLIENT FEEDBACK -->
+<section id="feedback">
+  <div class="container">
+    <div class="feedback-header fade-up">
+      <div class="section-label">Live Feedback</div>
+      <h2 class="section-title">Share Your <span>Experience</span>
+        <span class="live-badge"><span class="live-dot"></span>Live</span>
+      </h2>
+      <p class="section-desc" style="margin:0 auto">Your feedback appears instantly. You can edit or delete your review anytime.</p>
+    </div>
+
+    <div class="feedback-layout">
+      <!-- Submit Form -->
+      <div class="feedback-form-box fade-up">
+        <h3>Leave Your Feedback</h3>
+        <p>Your review goes live immediately — no approval wait.</p>
+
+        <div class="star-select" id="starSelect">
+          <span data-val="1">★</span>
+          <span data-val="2">★</span>
+          <span data-val="3">★</span>
+          <span data-val="4">★</span>
+          <span data-val="5">★</span>
+        </div>
+
+        <div class="fb-row">
+          <input class="fb-input" id="fbName" placeholder="Your Name *" maxlength="50">
+          <input class="fb-input" id="fbRole" placeholder="Business / Role" maxlength="60">
+        </div>
+        <textarea class="fb-input" id="fbText" rows="4" placeholder="Write your feedback here... *" maxlength="400"></textarea>
+        <button class="fb-submit" onclick="submitFeedback()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          Post Feedback
+        </button>
+      </div>
+
+      <!-- Live Feed -->
+      <div>
+        <div class="feed-top">
+          <h3>Client Feedback <span class="live-badge"><span class="live-dot"></span>Live</span></h3>
+          <span class="feed-count" id="feedCount">0</span>
+        </div>
+        <div class="feedback-feed" id="feedbackFeed">
+          <div class="empty-feed" id="emptyFeed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/></svg>
+            <p>No feedback yet. Be the first to share your experience!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-sidebar fade-up">
+        <div class="section-label">FAQs</div>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <p class="section-desc">Quick answers to common questions about my services. Still have doubts? Reach out directly.</p>
+        <div class="faq-contact">
+          <h4>Still Have Questions?</h4>
+          <p>I'm happy to explain anything in detail. Get in touch anytime.</p>
+          <div class="faq-contact-links">
+            <a href="tel:+918949276571" onclick="window.location.href='tel:+918949276571';return false;" class="faq-contact-link"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> +91 8949276571</a>
+            <a href="mailto:camadhav26@gmail.com" onclick="window.location.href='mailto:camadhav26@gmail.com';return false;" class="faq-contact-link"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> camadhav26@gmail.com</a>
+            <a href="https://wa.me/918949276571" target="_blank" class="faq-contact-link"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Chat</a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-list fade-up">
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>What documents are needed to file an ITR?</span>
+            <div class="faq-icon"><span style="font-style:normal;font-size:10px">▼</span></div>
+          </button>
+          <div class="faq-a">For salaried individuals: Form 16, bank statements, investment proofs (80C/80D), and PAN/Aadhaar. For business income: P&L statement, balance sheet, bank statements, GST returns, and TDS certificates. I'll guide you on exactly what's required for your specific case.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>What is CMA Data and when is it required?</span>
+            <div class="faq-icon"><span style="font-style:normal;font-size:10px">▼</span></div>
+          </button>
+          <div class="faq-a">CMA (Credit Monitoring Arrangement) Data is a detailed financial report banks require for processing working capital loans (CC/OD) and term loans above a certain limit. It includes past financials, projected profit & loss, balance sheet, cash flow, fund flow, and key financial ratios. Most banks require it for loans above ₹10 lakh.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>How long does GST registration take?</span>
+            <div class="faq-icon"><span style="font-style:normal;font-size:10px">▼</span></div>
+          </button>
+          <div class="faq-a">GST registration is typically completed within 3–7 working days after all documents are submitted. Required documents include PAN, Aadhaar, address proof, bank account details, and business proof. I handle the entire application process on your behalf.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>What if I receive a GST or Income Tax notice?</span>
+            <div class="faq-icon"><span style="font-style:normal;font-size:10px">▼</span></div>
+          </button>
+          <div class="faq-a">Don't panic. I handle notices regularly. Share the notice details with me and I'll analyze it, prepare the appropriate response with supporting documents, and file the reply within the given deadline. Most notices are resolved without any penalties when addressed properly and promptly.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Can I get services done remotely without visiting in person?</span>
+            <div class="faq-icon"><span style="font-style:normal;font-size:10px">▼</span></div>
+          </button>
+          <div class="faq-a">Absolutely. All services are available completely online. Documents can be shared via WhatsApp or email. Communication happens over call, WhatsApp, or email. I serve clients across Rajasthan and all over India entirely through digital channels.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Do you prepare project reports for all types of businesses?</span>
+            <div class="faq-icon"><span style="font-style:normal;font-size:10px">▼</span></div>
+          </button>
+          <div class="faq-a">Yes, I prepare project reports for manufacturing, trading, service businesses, food processing, retail, construction, and more. Reports are customized for specific loan schemes including Mudra, PMEGP, MSME term loans, and bank-specific requirements.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Is my financial information kept confidential?</span>
+            <div class="faq-icon"><span style="font-style:normal;font-size:10px">▼</span></div>
+          </button>
+          <div class="faq-a">Confidentiality is a cornerstone of my practice. All financial data shared by clients is strictly used only for the intended purpose and is never shared with any third party. I maintain secure digital records with restricted access at all times.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container contact-inner">
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <div class="section-label" style="color:rgba(0,200,150,0.9)">Get In Touch</div>
+        <h2 class="section-title">Let's <span style="color:var(--green)">Work Together</span></h2>
+        <p class="section-desc">Have a question or need a consultation? Reach out via any channel and I'll get back to you quickly.</p>
+        <div class="contact-details">
+          <a href="tel:+918949276571" onclick="window.location.href='tel:+918949276571';return false;" class="contact-detail">
+            <div class="contact-detail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+            <div class="contact-detail-info"><label>Phone</label><span>+91 8949276571</span></div>
+          </a>
+          <a href="mailto:camadhav26@gmail.com" onclick="window.location.href='mailto:camadhav26@gmail.com';return false;" class="contact-detail">
+            <div class="contact-detail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div class="contact-detail-info"><label>Email</label><span>camadhav26@gmail.com</span></div>
+          </a>
+          <a href="https://wa.me/918949276571" target="_blank" class="contact-detail">
+            <div class="contact-detail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+            <div class="contact-detail-info"><label>WhatsApp</label><span>Chat Instantly</span></div>
+          </a>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 11H11V7h1.5v5.25l4.5 2.67-.75 1.23L12.5 13z"/></svg></div>
+            <div class="contact-detail-info"><label>Working Hours</label><span>Mon–Sat: 9 AM – 7 PM</span></div>
+          </div>
+        </div>
+        <div class="social-row">
+          <a href="https://wa.me/918949276571" target="_blank" class="social-link" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="mailto:camadhav26@gmail.com" onclick="window.location.href='mailto:camadhav26@gmail.com';return false;" class="social-link" title="Email"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+          <a href="tel:+918949276571" onclick="window.location.href='tel:+918949276571';return false;" class="social-link" title="Call"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
+          <a href="#" class="social-link" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div class="contact-form-box fade-up">
+        <h3 class="form-title">Request a Callback</h3>
+        <p class="form-sub">Fill in your details and I'll get back to you within 24 hours.</p>
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name" id="fname"></div>
+            <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX" id="fphone"></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" id="femail"></div>
+          <div class="form-group">
+            <label>Service Required *</label>
+            <select id="fservice">
+              <option value="">Select a service...</option>
+              <option>Income Tax Filing</option>
+              <option>GST Registration & Filing</option>
+              <option>TDS Services</option>
+              <option>CMA Data Preparation</option>
+              <option>Project Report</option>
+              <option>Accounting & Bookkeeping</option>
+              <option>Excel Services</option>
+              <option>Business Registration</option>
+              <option>Loan Documentation</option>
+              <option>Financial Consultation</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message / Additional Details</label><textarea placeholder="Brief description of your requirement..." id="fmessage"></textarea></div>
+          <button class="form-submit" onclick="submitForm()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg> Send Enquiry</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Thank you! Your enquiry has been received.<br><span style="font-size:0.85rem;font-weight:400;color:rgba(255,255,255,0.55)">I'll contact you within 24 hours.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="text-decoration:none">
+          <div class="logo-icon">TC</div>
+          <div class="logo-text">
+            <span class="logo-name">TaxCrest</span>
+            <span class="logo-tagline">Advisory & Accounting Services</span>
+          </div>
+        </a>
+        <p>TaxCrest Advisory and Accounting Services — Professional tax, accounting and financial consulting for individuals, businesses and MSMEs. Accurate, timely and confidential.</p>
+        <div class="social-row">
+          <a href="https://wa.me/918949276571" target="_blank" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="mailto:camadhav26@gmail.com" onclick="window.location.href='mailto:camadhav26@gmail.com';return false;" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+          <a href="tel:+918949276571" onclick="window.location.href='tel:+918949276571';return false;" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
+          <a href="#" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-h">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Income Tax Filing</a></li>
+          <li><a href="#services">GST Registration</a></li>
+          <li><a href="#services">TDS Services</a></li>
+          <li><a href="#services">CMA Data</a></li>
+          <li><a href="#services">Project Reports</a></li>
+          <li><a href="#services">Bookkeeping</a></li>
+          <li><a href="#services">Excel Services</a></li>
+          <li><a href="#services">Business Registration</a></li>
+          <li><a href="#services">Loan Documentation</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Contact Details</div>
+        <a class="footer-contact-item" href="tel:+918949276571" onclick="window.location.href='tel:+918949276571';return false;" style="text-decoration:none;cursor:pointer;display:flex;align-items:center;gap:inherit"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>+91 8949276571</a>
+        <a class="footer-contact-item" href="mailto:camadhav26@gmail.com" onclick="window.location.href='mailto:camadhav26@gmail.com';return false;" style="text-decoration:none;cursor:pointer;display:flex;align-items:center;gap:inherit"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>camadhav26@gmail.com</a>
+        <a class="footer-contact-item" href="https://wa.me/918949276571" target="_blank" style="text-decoration:none;cursor:pointer;display:flex;align-items:center;gap:inherit"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp Chat</a>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 11H11V7h1.5v5.25l4.5 2.67-.75 1.23L12.5 13z"/></svg>Mon–Sat: 9 AM – 7 PM</div>
+        <div style="margin-top:1.5rem">
+          <a href="https://wa.me/918949276571" target="_blank" class="btn-primary" style="font-size:13px;padding:11px 20px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Now
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TaxCrest Advisory and Accounting Services. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- DISCLAIMER (small) -->
+<div style="background:#040b14;padding:10px 2rem;text-align:center">
+  <p style="color:rgba(255,255,255,0.2);font-size:11px;max-width:900px;margin:0 auto">
+    Disclaimer: The information provided on this website is for general informational purposes only and does not constitute legal, financial or tax advice. TaxCrest Advisory and Accounting Services — results may vary based on individual circumstances. All client names and project details are provided for illustrative purposes only.
+  </p>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918949276571" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  // Navbar toggle
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Close nav on link click
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.background = window.scrollY > 50
+      ? 'rgba(6,14,26,0.98)'
+      : 'rgba(10,22,40,0.96)';
+  });
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Intersection observer for fade-up
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  // Form submit
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const service = document.getElementById('fservice').value;
+    if (!name || !phone || !service) {
+      alert('Please fill in your name, phone number and service required.');
+      return;
+    }
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+
+    // WhatsApp redirect
+    const msg = `Hello Manoj sir, I am ${name}. I need help with: ${service}. My phone: ${phone}.`;
+    const waUrl = `https://wa.me/918949276571?text=${encodeURIComponent(msg)}`;
+    setTimeout(() => window.open(waUrl, '_blank'), 1500);
+  }
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}`
+        ? 'var(--green)' : '';
+    });
+  });
+
+  /* ──────────────────────────────────────────
+     REAL-TIME FEEDBACK SYSTEM
+  ────────────────────────────────────────── */
+  const STORAGE_KEY = 'taxcrest_feedback_v1';
+  const COLORS = ['blue','green','navy','#7B1FA2','#E65100','#00838F'];
+  let selectedStars = 0;
+  let feedbacks = [];
+
+  // Load from localStorage
+  function loadFeedbacks() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      feedbacks = raw ? JSON.parse(raw) : [];
+    } catch(e) { feedbacks = []; }
+  }
+
+  function saveFeedbacks() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(feedbacks));
+  }
+
+  function starsHtml(n) {
+    return '★'.repeat(n) + '☆'.repeat(5-n);
+  }
+
+  function getInitial(name) {
+    return name.trim().charAt(0).toUpperCase();
+  }
+
+  function randomColor(seed) {
+    const idx = seed.split('').reduce((a,c) => a + c.charCodeAt(0), 0) % COLORS.length;
+    return COLORS[idx];
+  }
+
+  function timeAgo(ts) {
+    const diff = (Date.now() - ts) / 1000;
+    if (diff < 60) return 'Just now';
+    if (diff < 3600) return Math.floor(diff/60) + ' min ago';
+    if (diff < 86400) return Math.floor(diff/3600) + ' hr ago';
+    return Math.floor(diff/86400) + ' day(s) ago';
+  }
+
+  function renderFeedbacks() {
+    const feed = document.getElementById('feedbackFeed');
+    const empty = document.getElementById('emptyFeed');
+    const count = document.getElementById('feedCount');
+
+    // Remove all items (keep empty state)
+    feed.querySelectorAll('.feedback-item').forEach(el => el.remove());
+    count.textContent = feedbacks.length;
+
+    if (feedbacks.length === 0) {
+      empty.style.display = 'block';
+      return;
+    }
+    empty.style.display = 'none';
+
+    // Render newest first
+    [...feedbacks].reverse().forEach(fb => {
+      const col = randomColor(fb.name);
+      const bgStyle = col.startsWith('#') ? `background:${col}` : `background:var(--${col})`;
+      const card = document.createElement('div');
+      card.className = 'feedback-item';
+      card.id = 'fi-' + fb.id;
+      card.innerHTML = `
+        <div class="fi-header">
+          <div class="fi-author">
+            <div class="fi-avatar" style="${bgStyle}">${getInitial(fb.name)}</div>
+            <div>
+              <div class="fi-name">${escHtml(fb.name)}</div>
+              <div class="fi-meta">${fb.role ? escHtml(fb.role) + ' · ' : ''}${timeAgo(fb.ts)}</div>
+            </div>
+          </div>
+          <div class="fi-stars">${starsHtml(fb.stars)}</div>
+        </div>
+        <div class="fi-text" id="fit-${fb.id}">${escHtml(fb.text)}</div>
+        <div class="fi-edit-box" id="feb-${fb.id}">
+          <textarea class="fi-edit-input" id="fei-${fb.id}" rows="3">${escHtml(fb.text)}</textarea>
+          <button class="fi-save" onclick="saveFbEdit('${fb.id}')">Save</button>
+          <button class="fi-cancel" onclick="cancelFbEdit('${fb.id}')">Cancel</button>
+        </div>
+        <div class="fi-actions">
+          <button class="fi-btn fi-edit" onclick="openFbEdit('${fb.id}')">✏ Edit</button>
+          <button class="fi-btn fi-delete" onclick="deleteFb('${fb.id}')">✕ Delete</button>
+        </div>
+      `;
+      feed.appendChild(card);
+    });
+  }
+
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // Star selector
+  document.getElementById('starSelect').addEventListener('mouseover', e => {
+    if (!e.target.dataset.val) return;
+    const v = +e.target.dataset.val;
+    document.querySelectorAll('#starSelect span').forEach((s,i) => {
+      s.classList.toggle('hover', i < v);
+    });
+  });
+  document.getElementById('starSelect').addEventListener('mouseleave', () => {
+    document.querySelectorAll('#starSelect span').forEach((s,i) => {
+      s.classList.remove('hover');
+      s.classList.toggle('active', i < selectedStars);
+    });
+  });
+  document.getElementById('starSelect').addEventListener('click', e => {
+    if (!e.target.dataset.val) return;
+    selectedStars = +e.target.dataset.val;
+    document.querySelectorAll('#starSelect span').forEach((s,i) => {
+      s.classList.toggle('active', i < selectedStars);
+    });
+  });
+
+  function submitFeedback() {
+    const name = document.getElementById('fbName').value.trim();
+    const role = document.getElementById('fbRole').value.trim();
+    const text = document.getElementById('fbText').value.trim();
+
+    if (!name) { alert('Please enter your name.'); return; }
+    if (!text) { alert('Please write your feedback.'); return; }
+    if (selectedStars === 0) { alert('Please select a star rating.'); return; }
+
+    const fb = {
+      id: Date.now().toString(36) + Math.random().toString(36).slice(2,6),
+      name, role, text, stars: selectedStars, ts: Date.now()
+    };
+
+    feedbacks.push(fb);
+    saveFeedbacks();
+    renderFeedbacks();
+
+    // Reset form
+    document.getElementById('fbName').value = '';
+    document.getElementById('fbRole').value = '';
+    document.getElementById('fbText').value = '';
+    selectedStars = 0;
+    document.querySelectorAll('#starSelect span').forEach(s => s.classList.remove('active','hover'));
+  }
+
+  function deleteFb(id) {
+    if (!confirm('Delete this feedback?')) return;
+    feedbacks = feedbacks.filter(f => f.id !== id);
+    saveFeedbacks();
+    const el = document.getElementById('fi-' + id);
+    if (el) { el.style.opacity='0'; el.style.transform='scale(0.95)'; el.style.transition='all 0.3s'; setTimeout(() => { el.remove(); renderFeedbacks(); }, 300); }
+    else renderFeedbacks();
+  }
+
+  function openFbEdit(id) {
+    document.getElementById('feb-' + id).classList.add('show');
+  }
+  function cancelFbEdit(id) {
+    document.getElementById('feb-' + id).classList.remove('show');
+  }
+  function saveFbEdit(id) {
+    const newText = document.getElementById('fei-' + id).value.trim();
+    if (!newText) { alert('Feedback cannot be empty.'); return; }
+    const fb = feedbacks.find(f => f.id === id);
+    if (fb) { fb.text = newText; fb.edited = true; }
+    saveFeedbacks();
+    renderFeedbacks();
+  }
+
+  // Init
+  loadFeedbacks();
+  renderFeedbacks();
+</script>
+<!-- ══════════════════════════════════════
+     PORTFOLIO / SAMPLE WORK MODAL
+══════════════════════════════════════ -->
+<div class="modal-overlay" id="portfolioModal" onclick="handleOverlayClick(event)">
+  <div class="modal-box" id="modalBox">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-tag" id="modalTag">Sample Work</div>
+        <div class="modal-title" id="modalTitle">Service Portfolio</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()" title="Close">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <!-- content injected by JS -->
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ──────────────────────────────────────
+     PORTFOLIO MODAL SYSTEM
+  ────────────────────────────────────── */
+  const SAMPLES = {
+
+    cma: {
+      tag: 'CMA Data — Confidential Portfolio',
+      title: 'Actual CMA Data Report — Manufacturing Business (Full Report)',
+      html: `
+        <style>
+          .cma-port-banner {
+            background: linear-gradient(135deg, #0D1B36, #1A3A6E);
+            border-radius: 12px; padding: 1.4rem 1.8rem; margin-bottom: 1.5rem;
+            display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+          }
+          .cma-port-banner .cpb-icon {
+            width: 48px; height: 48px; border-radius: 10px; flex-shrink: 0;
+            background: rgba(200,150,62,0.2); display: flex; align-items: center; justify-content: center;
+          }
+          .cma-port-banner .cpb-icon svg { color: #C8963E; }
+          .cma-port-banner h3 { color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 3px; font-family: 'DM Sans',sans-serif; }
+          .cma-port-banner p { color: rgba(255,255,255,0.55); font-size: 12px; margin: 0; }
+          .cma-port-stats { display: flex; gap: 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-left: auto; flex-shrink: 0; }
+          .cma-port-stat { padding: 10px 18px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); }
+          .cma-port-stat:last-child { border-right: none; }
+          .cma-port-stat .v { font-size: 1.1rem; font-weight: 700; color: #fff; display: block; }
+          .cma-port-stat .l { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; text-transform: uppercase; display: block; }
+          .cma-toc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 1.5rem; }
+          .cma-toc-item {
+            background: var(--off-white,#F4F7FC); border: 1px solid var(--grey-light,#E8EDF5);
+            border-radius: 7px; padding: 8px 10px; display: flex; align-items: center; gap: 7px;
+            font-size: 11px; font-weight: 600; color: #1A2640;
+          }
+          .cma-toc-item .sec-badge {
+            width: 20px; height: 20px; border-radius: 4px; flex-shrink: 0;
+            background: #0D1B36; color: #fff; font-size: 9px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+          }
+          .cma-sec-header {
+            display: flex; align-items: center; gap: 10px;
+            margin-bottom: 1rem; margin-top: 1.5rem;
+          }
+          .cma-sec-header .sn {
+            width: 28px; height: 28px; border-radius: 5px; flex-shrink: 0;
+            background: #0D1B36; color: #fff; font-size: 11px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+          }
+          .cma-sec-header .st {
+            font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; color: #1A3A6E;
+            border-bottom: 2px solid #C8963E; padding-bottom: 2px;
+          }
+          .cma-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.2rem; }
+          .cma-info-card {
+            background: var(--off-white,#F4F7FC); border: 1px solid var(--grey-light,#E8EDF5);
+            border-radius: 8px; padding: 1rem 1.1rem; border-left: 3px solid #C8963E;
+          }
+          .cma-info-card h5 { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #8A9BB5; margin-bottom: 0.6rem; }
+          .cma-info-row { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 11.5px; }
+          .cma-info-row:last-child { border-bottom: none; }
+          .cma-info-row span:first-child { color: #5A6275; }
+          .cma-info-row span:last-child { font-weight: 600; color: #0D1B36; text-align: right; }
+          .cma-full-table { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-bottom: 1.2rem; }
+          .cma-full-table thead th { background: #0D1B36; color: #fff; padding: 7px 10px; text-align: right; font-weight: 600; font-size: 10.5px; border: 1px solid rgba(255,255,255,0.1); }
+          .cma-full-table thead th:first-child { text-align: left; }
+          .cma-full-table tbody td { padding: 6px 10px; border: 1px solid #C5CDD8; text-align: right; vertical-align: middle; font-size: 11px; }
+          .cma-full-table tbody td:first-child { text-align: left; color: #5A6275; }
+          .cma-full-table tbody tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+          .cma-full-table .r-group td { background: rgba(13,27,54,0.06) !important; font-weight: 700; color: #0D1B36 !important; font-size: 10.5px; letter-spacing: 0.3px; }
+          .cma-full-table .r-total td { background: #0D1B36 !important; color: #fff !important; font-weight: 700; }
+          .cma-full-table .r-hi td { background: rgba(30,107,79,0.08) !important; color: #1E6B4F !important; font-weight: 600; }
+          .cma-full-table .r-accent td { background: rgba(200,150,62,0.1) !important; font-weight: 700; color: #0D1B36 !important; }
+          .cma-full-table .pos { color: #1E6B4F; }
+          .cma-full-table .neg { color: #B22222; }
+          .cma-full-table .num { font-family: monospace; }
+          .cma-ratio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 1.2rem; }
+          .cma-ratio-card {
+            background: #fff; border: 1px solid #C5CDD8; border-radius: 8px;
+            padding: 10px; text-align: center;
+          }
+          .cma-ratio-card .rv { font-size: 1.4rem; font-weight: 700; color: #0D1B36; line-height: 1; font-family: 'Playfair Display',serif; }
+          .cma-ratio-card .rl { font-size: 10px; color: #5A6275; margin-top: 4px; }
+          .cma-ratio-card .rs { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; display: inline-block; margin-top: 5px; }
+          .rs-good { background: rgba(30,107,79,0.12); color: #1E6B4F; }
+          .rs-ok { background: rgba(200,150,62,0.15); color: #8b5e1a; }
+          .cma-mpbf-box {
+            background: #0D1B36; border-radius: 10px; padding: 1.4rem 1.6rem;
+            margin-bottom: 1.2rem; color: #fff;
+          }
+          .cma-mpbf-box h5 { color: #C8963E; font-size: 0.9rem; font-family: 'Playfair Display',serif; margin-bottom: 1rem; }
+          .cma-mpbf-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 12px; }
+          .cma-mpbf-row:last-child { border-bottom: none; }
+          .cma-mpbf-row span:first-child { color: rgba(255,255,255,0.65); }
+          .cma-mpbf-row span:last-child { font-family: monospace; font-weight: 600; }
+          .cma-mpbf-final { background: #C8963E; border-radius: 6px; padding: 8px 12px !important; margin-top: 0.8rem; }
+          .cma-mpbf-final span { color: #0D1B36 !important; font-weight: 800 !important; }
+          .cma-notes-box {
+            background: rgba(200,150,62,0.06); border: 1px solid rgba(200,150,62,0.25);
+            border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 1rem;
+          }
+          .cma-notes-box h5 { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #C8963E; margin-bottom: 0.8rem; }
+          .cma-note-item { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 5px; font-size: 11.5px; color: #5A6275; }
+          .cma-note-item::before { content: '•'; color: #C8963E; flex-shrink: 0; font-size: 14px; margin-top: -2px; }
+          .cma-proj-badge {
+            display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 1px;
+            text-transform: uppercase; background: rgba(30,58,110,0.12); color: #1A3A6E;
+            padding: 2px 8px; border-radius: 4px; margin-left: 6px; vertical-align: middle;
+          }
+          @media (max-width: 600px) {
+            .cma-toc { grid-template-columns: repeat(2, 1fr); }
+            .cma-ratio-grid { grid-template-columns: repeat(2, 1fr); }
+            .cma-info-grid { grid-template-columns: 1fr; }
+            .cma-port-stats { display: none; }
+          }
+        </style>
+
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span><strong>Confidential Portfolio:</strong> This is an actual CMA Data report prepared by TaxCrest. Client name and lending institution have been withheld to protect privacy. All financial figures are from the real submitted report.</span>
+        </div>
+
+        <!-- Cover Banner -->
+        <div class="cma-port-banner">
+          <div class="cpb-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M3.5 18.5l6-6 4 4L22 6.92 20.59 5.5l-7.09 8-4-4L2 17l1.5 1.5z"/></svg>
+          </div>
+          <div>
+            <h3>CMA Data Report — Manufacturing Business (Metal Fabrication)</h3>
+            <p>Credit Monitoring Arrangement Data &nbsp;|&nbsp; Working Capital + Term Loan &nbsp;|&nbsp; MSME — Small Enterprise &nbsp;|&nbsp; Rajasthan &nbsp;|&nbsp; Prepared by TaxCrest Advisory &amp; Accounting Services</p>
+          </div>
+          <div class="cma-port-stats">
+            <div class="cma-port-stat"><span class="v">₹4.80 Cr</span><span class="l">Loan Amount</span></div>
+            <div class="cma-port-stat"><span class="v">FY25–28</span><span class="l">Period</span></div>
+            <div class="cma-port-stat"><span class="v">9 Sections</span><span class="l">Report Depth</span></div>
+          </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="samp-section">
+          <h4>Report Contents</h4>
+          <div class="cma-toc">
+            <div class="cma-toc-item"><div class="sec-badge">A</div>Borrower Profile</div>
+            <div class="cma-toc-item"><div class="sec-badge">B</div>Balance Sheet</div>
+            <div class="cma-toc-item"><div class="sec-badge">C</div>P&amp;L Statement</div>
+            <div class="cma-toc-item"><div class="sec-badge">D</div>Cash Flow</div>
+            <div class="cma-toc-item"><div class="sec-badge">E</div>Working Capital</div>
+            <div class="cma-toc-item"><div class="sec-badge">F</div>MPBF (Tandon)</div>
+            <div class="cma-toc-item"><div class="sec-badge">G</div>Ratio Analysis</div>
+            <div class="cma-toc-item"><div class="sec-badge">H</div>Fund Flow</div>
+            <div class="cma-toc-item"><div class="sec-badge">I</div>Assumptions &amp; Notes</div>
+          </div>
+        </div>
+
+        <!-- Section A: Borrower Profile -->
+        <div class="cma-sec-header"><div class="sn">A</div><div class="st">Borrower Profile &amp; Loan Details</div></div>
+        <div class="cma-info-grid">
+          <div class="cma-info-card">
+            <h5>Company Information</h5>
+            <div class="cma-info-row"><span>Company Name</span><span>[Withheld — Confidential]</span></div>
+            <div class="cma-info-row"><span>Constitution</span><span>Private Limited Company</span></div>
+            <div class="cma-info-row"><span>Date of Incorporation</span><span>March 2018</span></div>
+            <div class="cma-info-row"><span>MSME Category</span><span>Small Enterprise</span></div>
+            <div class="cma-info-row"><span>Industry</span><span>Metal Fabrication &amp; Structural Steel</span></div>
+            <div class="cma-info-row"><span>Key Customers</span><span>L&amp;T, BHEL, NTPC Vendors</span></div>
+          </div>
+          <div class="cma-info-card">
+            <h5>Loan Requirement</h5>
+            <div class="cma-info-row"><span>Type of Facility</span><span>Cash Credit (CC) + Term Loan</span></div>
+            <div class="cma-info-row"><span>CC Limit Requested</span><span>₹ 2,80,00,000</span></div>
+            <div class="cma-info-row"><span>Term Loan Amount</span><span>₹ 2,00,00,000</span></div>
+            <div class="cma-info-row"><span>Total Exposure</span><span>₹ 4,80,00,000</span></div>
+            <div class="cma-info-row"><span>Purpose — CC</span><span>Working Capital (Raw Material, WIP)</span></div>
+            <div class="cma-info-row"><span>Purpose — TL</span><span>Plant &amp; Machinery Expansion</span></div>
+          </div>
+          <div class="cma-info-card">
+            <h5>Security Offered</h5>
+            <div class="cma-info-row"><span>Primary Security</span><span>Stocks &amp; Book Debts (Hypothecation)</span></div>
+            <div class="cma-info-row"><span>Collateral</span><span>Commercial Property — ₹1.85 Cr MV</span></div>
+            <div class="cma-info-row"><span>Personal Guarantee</span><span>Both Directors</span></div>
+            <div class="cma-info-row"><span>CIBIL Score — Dir. 1</span><span>762</span></div>
+            <div class="cma-info-row"><span>CIBIL Score — Dir. 2</span><span>748</span></div>
+            <div class="cma-info-row"><span>Lending Bank</span><span>[Withheld — Confidential]</span></div>
+          </div>
+          <div class="cma-info-card">
+            <h5>CapEx Plan (FY 2025–26)</h5>
+            <div class="cma-info-row"><span>CNC Plasma Cutting Machine</span><span>₹80 Lakhs</span></div>
+            <div class="cma-info-row"><span>Hydraulic Press Brake (250T)</span><span>₹55 Lakhs</span></div>
+            <div class="cma-info-row"><span>MIG Welding Stations (6 units)</span><span>₹28 Lakhs</span></div>
+            <div class="cma-info-row"><span>Material Handling / EOT Crane</span><span>₹22 Lakhs</span></div>
+            <div class="cma-info-row"><span>Civil Work (Floor Expansion)</span><span>₹15 Lakhs</span></div>
+            <div class="cma-info-row"><span>Total CapEx</span><span style="color:#1E6B4F; font-weight:700">₹200 Lakhs</span></div>
+          </div>
+        </div>
+
+        <!-- Section B: Balance Sheet -->
+        <div class="cma-sec-header"><div class="sn">B</div><div class="st">Projected Balance Sheet <span class="cma-proj-badge">₹ in Lakhs</span></div></div>
+        <table class="cma-full-table">
+          <thead>
+            <tr>
+              <th style="width:40%;text-align:left">Particulars</th>
+              <th>FY 2023–24 (Act.)</th><th>FY 2024–25 (Act.)</th>
+              <th>FY 2025–26 ★</th><th>FY 2026–27 ★</th><th>FY 2027–28 ★</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="r-group"><td colspan="6">SOURCES OF FUNDS</td></tr>
+            <tr><td>Share Capital</td><td class="num">50.00</td><td class="num">50.00</td><td class="num">50.00</td><td class="num">50.00</td><td class="num">50.00</td></tr>
+            <tr><td>Reserves &amp; Surplus</td><td class="num">68.42</td><td class="num">102.85</td><td class="num">158.72</td><td class="num">228.64</td><td class="num">318.41</td></tr>
+            <tr class="r-hi"><td>Net Worth</td><td class="num">118.42</td><td class="num">152.85</td><td class="num">208.72</td><td class="num">278.64</td><td class="num">368.41</td></tr>
+            <tr><td>Term Loan — Existing</td><td class="num">42.30</td><td class="num">28.20</td><td class="num">14.10</td><td class="num">—</td><td class="num">—</td></tr>
+            <tr><td>Term Loan — Proposed</td><td class="num">—</td><td class="num">—</td><td class="num">200.00</td><td class="num">152.00</td><td class="num">100.00</td></tr>
+            <tr><td>Cash Credit — Existing</td><td class="num">85.00</td><td class="num">105.00</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+            <tr><td>Cash Credit — Proposed</td><td class="num">—</td><td class="num">—</td><td class="num">280.00</td><td class="num">280.00</td><td class="num">280.00</td></tr>
+            <tr><td>Unsecured Loans (Promoter)</td><td class="num">22.00</td><td class="num">18.00</td><td class="num">15.00</td><td class="num">10.00</td><td class="num">—</td></tr>
+            <tr class="r-total"><td>TOTAL SOURCES</td><td class="num">267.72</td><td class="num">304.05</td><td class="num">717.82</td><td class="num">720.64</td><td class="num">748.41</td></tr>
+            <tr class="r-group"><td colspan="6">APPLICATION OF FUNDS</td></tr>
+            <tr><td>Net Fixed Assets (after Dep.)</td><td class="num">110.40</td><td class="num">109.60</td><td class="num">275.76</td><td class="num">251.98</td><td class="num">225.54</td></tr>
+            <tr><td>Inventories</td><td class="num">68.42</td><td class="num">85.60</td><td class="num">148.20</td><td class="num">175.30</td><td class="num">204.80</td></tr>
+            <tr><td>Sundry Debtors</td><td class="num">54.80</td><td class="num">72.40</td><td class="num">198.60</td><td class="num">230.40</td><td class="num">268.20</td></tr>
+            <tr><td>Cash &amp; Bank Balance</td><td class="num">8.30</td><td class="num">6.25</td><td class="num">42.26</td><td class="num">18.96</td><td class="num">3.87</td></tr>
+            <tr><td>Other Current Assets</td><td class="num">25.80</td><td class="num">21.80</td><td class="num">53.00</td><td class="num">44.00</td><td class="num">46.00</td></tr>
+            <tr class="r-hi"><td>Total Current Assets</td><td class="num">157.32</td><td class="num">186.05</td><td class="num">442.06</td><td class="num">468.66</td><td class="num">522.87</td></tr>
+            <tr><td>Less: Current Liabilities</td><td class="num">(100.00)</td><td class="num">(110.00)</td><td class="num">(150.00)</td><td class="num">(160.00)</td><td class="num">(170.00)</td></tr>
+            <tr class="r-total"><td>TOTAL APPLICATION</td><td class="num">267.72</td><td class="num">304.05</td><td class="num">717.82</td><td class="num">720.64</td><td class="num">748.41</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Section C: P&L -->
+        <div class="cma-sec-header"><div class="sn">C</div><div class="st">Projected Profit &amp; Loss Statement <span class="cma-proj-badge">₹ in Lakhs</span></div></div>
+        <table class="cma-full-table">
+          <thead>
+            <tr>
+              <th style="width:40%;text-align:left">Particulars</th>
+              <th>FY 2023–24</th><th>FY 2024–25</th>
+              <th>FY 2025–26 ★</th><th>FY 2026–27 ★</th><th>FY 2027–28 ★</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="r-accent"><td>Net Sales / Turnover</td><td class="num">482.60</td><td class="num">614.20</td><td class="num">820.00</td><td class="num">980.00</td><td class="num">1,140.00</td></tr>
+            <tr><td>&nbsp;Raw Material Consumed</td><td class="num">292.40</td><td class="num">368.52</td><td class="num">475.60</td><td class="num">558.60</td><td class="num">639.40</td></tr>
+            <tr><td>&nbsp;Manufacturing Expenses</td><td class="num">48.26</td><td class="num">61.42</td><td class="num">82.00</td><td class="num">98.00</td><td class="num">114.00</td></tr>
+            <tr><td>&nbsp;Employee Cost</td><td class="num">42.80</td><td class="num">55.28</td><td class="num">74.00</td><td class="num">88.20</td><td class="num">102.60</td></tr>
+            <tr><td>&nbsp;Power &amp; Fuel</td><td class="num">18.40</td><td class="num">24.57</td><td class="num">32.80</td><td class="num">39.20</td><td class="num">45.60</td></tr>
+            <tr class="r-hi"><td>Gross Profit</td><td class="num">80.74</td><td class="num">104.41</td><td class="num pos">155.60</td><td class="num pos">196.00</td><td class="num pos">238.40</td></tr>
+            <tr><td>&nbsp;Admin &amp; Selling Expenses</td><td class="num">24.13</td><td class="num">30.71</td><td class="num">41.00</td><td class="num">49.00</td><td class="num">57.00</td></tr>
+            <tr><td>&nbsp;Depreciation</td><td class="num">14.60</td><td class="num">14.60</td><td class="num">19.84</td><td class="num">23.78</td><td class="num">26.44</td></tr>
+            <tr class="r-hi"><td>EBITDA</td><td class="num">55.21</td><td class="num">73.70</td><td class="num pos">114.60</td><td class="num pos">147.00</td><td class="num pos">181.40</td></tr>
+            <tr><td>&nbsp;Interest on CC (@ 10.50%)</td><td class="num">8.93</td><td class="num">11.03</td><td class="num">29.40</td><td class="num">29.40</td><td class="num">29.40</td></tr>
+            <tr><td>&nbsp;Interest on Term Loan (@ 9.50%)</td><td class="num">4.02</td><td class="num">2.68</td><td class="num">19.00</td><td class="num">14.44</td><td class="num">9.50</td></tr>
+            <tr class="r-hi"><td>Net Profit Before Tax (PBT)</td><td class="num">42.26</td><td class="num">59.99</td><td class="num pos">66.20</td><td class="num pos">103.16</td><td class="num pos">142.50</td></tr>
+            <tr><td>&nbsp;Income Tax (@ 25.17%)</td><td class="num">10.64</td><td class="num">15.10</td><td class="num">16.66</td><td class="num">25.97</td><td class="num">35.87</td></tr>
+            <tr class="r-total"><td>Net Profit After Tax (PAT)</td><td class="num">31.62</td><td class="num">44.89</td><td class="num">49.54</td><td class="num">77.19</td><td class="num">106.63</td></tr>
+            <tr class="r-accent"><td>EBITDA Margin</td><td class="num">11.44%</td><td class="num">12.00%</td><td class="num pos">13.97%</td><td class="num pos">15.00%</td><td class="num pos">15.91%</td></tr>
+            <tr class="r-accent"><td>Net Profit Margin</td><td class="num">6.55%</td><td class="num">7.31%</td><td class="num">6.04%</td><td class="num pos">7.88%</td><td class="num pos">9.35%</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Section D: Cash Flow -->
+        <div class="cma-sec-header"><div class="sn">D</div><div class="st">Projected Cash Flow Statement <span class="cma-proj-badge">₹ in Lakhs</span></div></div>
+        <table class="cma-full-table">
+          <thead>
+            <tr>
+              <th style="width:50%;text-align:left">Particulars</th>
+              <th>FY 2025–26 ★</th><th>FY 2026–27 ★</th><th>FY 2027–28 ★</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="r-group"><td colspan="4">A. CASH INFLOWS</td></tr>
+            <tr><td>Net Profit After Tax</td><td class="num pos">49.54</td><td class="num pos">77.19</td><td class="num pos">106.63</td></tr>
+            <tr><td>Depreciation (Non-Cash)</td><td class="num pos">19.84</td><td class="num pos">23.78</td><td class="num pos">26.44</td></tr>
+            <tr><td>Term Loan Inflow (Proposed)</td><td class="num pos">200.00</td><td class="num">—</td><td class="num">—</td></tr>
+            <tr><td>Cash Credit Inflow (Proposed)</td><td class="num pos">280.00</td><td class="num">—</td><td class="num">—</td></tr>
+            <tr><td>Increase in Creditors</td><td class="num pos">21.60</td><td class="num pos">6.00</td><td class="num pos">7.00</td></tr>
+            <tr class="r-hi"><td>Total Inflows (A)</td><td class="num">571.98</td><td class="num">106.97</td><td class="num">140.07</td></tr>
+            <tr class="r-group"><td colspan="4">B. CASH OUTFLOWS</td></tr>
+            <tr><td>Capital Expenditure (Plant &amp; Machinery)</td><td class="num neg">200.00</td><td class="num">—</td><td class="num">—</td></tr>
+            <tr><td>Increase in Inventories</td><td class="num neg">62.60</td><td class="num neg">27.10</td><td class="num neg">29.50</td></tr>
+            <tr><td>Increase in Debtors</td><td class="num neg">126.20</td><td class="num neg">31.80</td><td class="num neg">37.80</td></tr>
+            <tr><td>Repayment of Term Loan (Existing)</td><td class="num neg">14.10</td><td class="num neg">14.10</td><td class="num">—</td></tr>
+            <tr><td>Repayment of Term Loan (Proposed)</td><td class="num">—</td><td class="num neg">48.00</td><td class="num neg">52.00</td></tr>
+            <tr><td>Tax Paid</td><td class="num neg">16.66</td><td class="num neg">25.97</td><td class="num neg">35.87</td></tr>
+            <tr><td>Other Outflows</td><td class="num neg">21.60</td><td class="num neg">6.00</td><td class="num neg">5.00</td></tr>
+            <tr class="r-hi"><td>Total Outflows (B)</td><td class="num">441.16</td><td class="num">152.97</td><td class="num">160.17</td></tr>
+            <tr class="r-accent"><td>Net Cash Surplus / (Deficit)</td><td class="num pos">130.82</td><td class="num neg">(46.00)</td><td class="num neg">(20.10)</td></tr>
+            <tr><td>Opening Cash Balance</td><td class="num">6.25</td><td class="num">42.26</td><td class="num">18.96</td></tr>
+            <tr class="r-total"><td>Closing Cash Balance</td><td class="num">42.26</td><td class="num">18.96</td><td class="num">3.87</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Section E: Working Capital -->
+        <div class="cma-sec-header"><div class="sn">E</div><div class="st">Working Capital Assessment — FY 2025–26 <span class="cma-proj-badge">₹ in Lakhs</span></div></div>
+        <table class="cma-full-table">
+          <thead>
+            <tr>
+              <th style="width:38%;text-align:left">Particulars</th>
+              <th>Holding Period</th><th>FY 2024–25 (Act.)</th>
+              <th>FY 2025–26 ★</th><th>FY 2026–27 ★</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="r-group"><td colspan="5">CURRENT ASSETS</td></tr>
+            <tr><td>Raw Material Inventory</td><td class="num">30 days</td><td class="num">52.30</td><td class="num">39.63</td><td class="num">46.55</td></tr>
+            <tr><td>Work-in-Progress (WIP)</td><td class="num">15 days</td><td class="num">25.60</td><td class="num">19.82</td><td class="num">23.28</td></tr>
+            <tr><td>Finished Goods / Stock</td><td class="num">20 days</td><td class="num">7.70</td><td class="num">45.00</td><td class="num">53.00</td></tr>
+            <tr><td>Sundry Debtors</td><td class="num">60 days</td><td class="num">72.40</td><td class="num">134.24</td><td class="num">160.55</td></tr>
+            <tr><td>Other Current Assets</td><td class="num">—</td><td class="num">21.80</td><td class="num">53.00</td><td class="num">44.00</td></tr>
+            <tr class="r-hi"><td>Total Current Assets (TCA)</td><td class="num">—</td><td class="num">179.80</td><td class="num">291.69</td><td class="num">327.38</td></tr>
+            <tr class="r-group"><td colspan="5">CURRENT LIABILITIES (Excl. Bank)</td></tr>
+            <tr><td>Sundry Creditors</td><td class="num">30 days</td><td class="num">60.40</td><td class="num">39.63</td><td class="num">46.55</td></tr>
+            <tr><td>Other Current Liabilities</td><td class="num">—</td><td class="num">49.60</td><td class="num">68.00</td><td class="num">72.00</td></tr>
+            <tr class="r-hi"><td>Total CL (Other than Bank)</td><td class="num">—</td><td class="num">110.00</td><td class="num">107.63</td><td class="num">118.55</td></tr>
+            <tr class="r-accent"><td>Working Capital Gap</td><td class="num">—</td><td class="num">69.80</td><td class="num">184.06</td><td class="num">208.83</td></tr>
+            <tr><td>Less: Promoter Contribution (25% TCA)</td><td class="num">—</td><td class="num">(17.45)</td><td class="num">(46.01)</td><td class="num">(52.21)</td></tr>
+            <tr class="r-total"><td>Maximum Permissible Bank Finance (MPBF)</td><td class="num">—</td><td class="num">52.35</td><td class="num">138.05</td><td class="num">156.62</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Section F: MPBF -->
+        <div class="cma-sec-header"><div class="sn">F</div><div class="st">MPBF Calculation — Tandon Committee Method II</div></div>
+        <div class="cma-mpbf-box">
+          <h5>MPBF Calculation — FY 2025–26 (Projected)</h5>
+          <div class="cma-mpbf-row"><span>Total Current Assets (TCA)</span><span>₹ 291.69 Lakhs</span></div>
+          <div class="cma-mpbf-row"><span>Less: Other Current Liabilities (excl. bank)</span><span>₹ 107.63 Lakhs</span></div>
+          <div class="cma-mpbf-row"><span>Working Capital Gap (WCG)</span><span>₹ 184.06 Lakhs</span></div>
+          <div class="cma-mpbf-row"><span>Less: Min. Promoter Margin (25% of TCA per RBI)</span><span>₹ 72.92 Lakhs</span></div>
+          <div class="cma-mpbf-row cma-mpbf-final"><span>Maximum Permissible Bank Finance (MPBF)</span><span>₹ 111.14 Lakhs</span></div>
+          <div class="cma-mpbf-row" style="margin-top:0.8rem"><span>CC Limit Requested</span><span>₹ 280.00 Lakhs</span></div>
+          <div class="cma-mpbf-row"><span>MPBF Method I</span><span>₹ 111.14 Lakhs</span></div>
+          <div class="cma-mpbf-row"><span>MPBF Method II (higher)</span><span>₹ 138.05 Lakhs</span></div>
+          <div class="cma-mpbf-row"><span style="color:#e8c06a;font-weight:600">Recommended CC Limit (based on turnover &amp; security)</span><span style="color:#e8c06a">₹ 280.00 Lakhs ✓</span></div>
+        </div>
+
+        <!-- Section G: Ratio Analysis -->
+        <div class="cma-sec-header"><div class="sn">G</div><div class="st">Ratio Analysis</div></div>
+        <div class="cma-ratio-grid">
+          <div class="cma-ratio-card"><div class="rv">1.94x</div><div class="rl">Current Ratio (FY26)</div><div class="rs rs-good">✓ Strong (Norm ≥ 1.33)</div></div>
+          <div class="cma-ratio-card"><div class="rv">2.55x</div><div class="rl">Avg. DSCR (FY26–28)</div><div class="rs rs-good">✓ Healthy (Norm ≥ 1.5)</div></div>
+          <div class="cma-ratio-card"><div class="rv">1.47x</div><div class="rl">Security Coverage</div><div class="rs rs-good">✓ Adequate</div></div>
+          <div class="cma-ratio-card"><div class="rv">6.04%</div><div class="rl">Net Profit Margin (FY26)</div><div class="rs rs-ok">➜ Improving</div></div>
+        </div>
+        <table class="cma-full-table">
+          <thead>
+            <tr>
+              <th style="width:30%;text-align:left">Ratio</th><th style="text-align:left">Formula</th>
+              <th>FY23–24</th><th>FY24–25</th><th>FY25–26★</th><th>FY26–27★</th><th>FY27–28★</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="r-group"><td colspan="7">LIQUIDITY RATIOS</td></tr>
+            <tr><td>Current Ratio</td><td style="text-align:left;color:#5A6275;font-size:10.5px">TCA / TCL</td><td class="num">1.57</td><td class="num">1.69</td><td class="num pos">1.94</td><td class="num pos">2.02</td><td class="num pos">2.14</td></tr>
+            <tr><td>Quick Ratio</td><td style="text-align:left;color:#5A6275;font-size:10.5px">(TCA–Inv) / TCL</td><td class="num">0.89</td><td class="num">0.92</td><td class="num">1.14</td><td class="num">1.18</td><td class="num">1.23</td></tr>
+            <tr class="r-group"><td colspan="7">PROFITABILITY RATIOS</td></tr>
+            <tr><td>Gross Profit Margin</td><td style="text-align:left;color:#5A6275;font-size:10.5px">GP / Net Sales</td><td class="num">16.73%</td><td class="num">17.00%</td><td class="num pos">18.97%</td><td class="num pos">20.00%</td><td class="num pos">20.91%</td></tr>
+            <tr><td>EBITDA Margin</td><td style="text-align:left;color:#5A6275;font-size:10.5px">EBITDA / Net Sales</td><td class="num">11.44%</td><td class="num">12.00%</td><td class="num pos">13.97%</td><td class="num pos">15.00%</td><td class="num pos">15.91%</td></tr>
+            <tr><td>Net Profit Margin</td><td style="text-align:left;color:#5A6275;font-size:10.5px">PAT / Net Sales</td><td class="num">6.55%</td><td class="num">7.31%</td><td class="num">6.04%</td><td class="num pos">7.88%</td><td class="num pos">9.35%</td></tr>
+            <tr><td>Return on Net Worth</td><td style="text-align:left;color:#5A6275;font-size:10.5px">PAT / Net Worth</td><td class="num">26.70%</td><td class="num">29.37%</td><td class="num">23.73%</td><td class="num">27.71%</td><td class="num pos">28.95%</td></tr>
+            <tr class="r-group"><td colspan="7">LEVERAGE &amp; DSCR</td></tr>
+            <tr><td>Debt-Equity Ratio</td><td style="text-align:left;color:#5A6275;font-size:10.5px">TL Debt / Net Worth</td><td class="num">0.36</td><td class="num">0.18</td><td class="num">0.96</td><td class="num">0.55</td><td class="num pos">0.27</td></tr>
+            <tr><td>Interest Coverage Ratio</td><td style="text-align:left;color:#5A6275;font-size:10.5px">EBIT / Interest</td><td class="num">4.24</td><td class="num">5.34</td><td class="num">2.34</td><td class="num pos">3.35</td><td class="num pos">4.28</td></tr>
+            <tr><td>DSCR</td><td style="text-align:left;color:#5A6275;font-size:10.5px">(PAT+Dep+Int) / (EMI+Int)</td><td class="num">—</td><td class="num">—</td><td class="num pos">2.18</td><td class="num pos">2.58</td><td class="num pos">2.88</td></tr>
+            <tr class="r-accent"><td>Average DSCR (3 Years)</td><td colspan="5" style="text-align:right;font-weight:700;color:#0D1B36">2.55 — Satisfactory</td></tr>
+            <tr class="r-group"><td colspan="7">EFFICIENCY RATIOS</td></tr>
+            <tr><td>Debtor Turnover</td><td style="text-align:left;color:#5A6275;font-size:10.5px">Debtors / Sales × 365</td><td class="num">41 days</td><td class="num">43 days</td><td class="num">88 days</td><td class="num">86 days</td><td class="num">86 days</td></tr>
+            <tr><td>Creditor Turnover</td><td style="text-align:left;color:#5A6275;font-size:10.5px">Creditors / Purch. × 365</td><td class="num">37 days</td><td class="num">38 days</td><td class="num">40 days</td><td class="num">38 days</td><td class="num">38 days</td></tr>
+            <tr><td>Inventory Turnover</td><td style="text-align:left;color:#5A6275;font-size:10.5px">Inventory / COGS × 365</td><td class="num">52 days</td><td class="num">55 days</td><td class="num">60 days</td><td class="num">60 days</td><td class="num">58 days</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Section H: Fund Flow -->
+        <div class="cma-sec-header"><div class="sn">H</div><div class="st">Fund Flow Statement — FY 2025–26 <span class="cma-proj-badge">₹ in Lakhs</span></div></div>
+        <table class="cma-full-table">
+          <thead>
+            <tr>
+              <th style="width:35%;text-align:left">Sources of Funds</th><th>Amount</th>
+              <th style="width:35%;text-align:left">Application of Funds</th><th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Net Profit After Tax</td><td class="num">49.54</td><td>Capital Expenditure (Machinery)</td><td class="num">200.00</td></tr>
+            <tr><td>Depreciation (Non-Cash)</td><td class="num">19.84</td><td>Increase in Inventories</td><td class="num">62.60</td></tr>
+            <tr><td>Term Loan (Proposed)</td><td class="num">200.00</td><td>Increase in Debtors</td><td class="num">126.20</td></tr>
+            <tr><td>Cash Credit (Proposed)</td><td class="num">280.00</td><td>Repayment of Existing TL</td><td class="num">14.10</td></tr>
+            <tr><td>Increase in Creditors</td><td class="num">21.60</td><td>Income Tax Paid</td><td class="num">16.66</td></tr>
+            <tr><td>Decrease in Unsecured Loans</td><td class="num">3.00</td><td>Increase in Other CA</td><td class="num">28.00</td></tr>
+            <tr><td>Other Adjustments</td><td class="num">18.38</td><td>Increase in Net Cash</td><td class="num">36.01</td></tr>
+            <tr class="r-total"><td>TOTAL SOURCES</td><td class="num">592.36</td><td>TOTAL APPLICATION</td><td class="num">486.77</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Section I: Key Assumptions -->
+        <div class="cma-sec-header"><div class="sn">I</div><div class="st">Key Assumptions &amp; Notes</div></div>
+        <div class="cma-notes-box">
+          <h5>Revenue &amp; Growth Assumptions</h5>
+          <div class="cma-note-item">Revenue projected to grow at 33.5% in FY26 (₹820 lakhs), 19.5% in FY27 (₹980 lakhs), and 16.3% in FY28 (₹1,140 lakhs) based on confirmed purchase orders from existing vendor agreements.</div>
+          <div class="cma-note-item">Letter of intent (LOI) received for supply of structural steel components worth ₹180 lakhs (FY26), forming the basis of projected sales increase.</div>
+          <div class="cma-note-item">EBITDA margin expected to improve to 13.97%–15.91% owing to operational leverage from new machinery.</div>
+        </div>
+        <div class="cma-notes-box">
+          <h5>Cost &amp; Financial Assumptions</h5>
+          <div class="cma-note-item">Raw material cost estimated at 58% of turnover (industry benchmark: 55%–62%), consistent with actual FY24 and FY25 ratios.</div>
+          <div class="cma-note-item">Employee cost includes wages for 42 skilled workers + 8 administrative staff; 6% annual wage escalation assumed.</div>
+          <div class="cma-note-item">Interest on CC @ 10.50% p.a. (MCLR + 1.25%) and Term Loan @ 9.50% p.a. (MCLR + 0.25% — MSME concessional rate).</div>
+          <div class="cma-note-item">Income Tax computed at 25.17% (domestic company rate, Finance Act 2023).</div>
+        </div>
+        <div class="cma-notes-box">
+          <h5>Working Capital Assumptions</h5>
+          <div class="cma-note-item">Debtor holding maintained at 60 days — standard for B2B manufacturing contracts with government-linked corporates.</div>
+          <div class="cma-note-item">Creditor payment cycle of 30 days; Inventory holding: RM 30 days, WIP 15 days, FG 20 days.</div>
+          <div class="cma-note-item">Promoter's own margin of 25% on NWC requirement to be met through ploughback of profits and existing reserves.</div>
+        </div>
+
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          ₹4.80 Cr loan sanctioned — CC limit ₹2.80 Cr + Term Loan ₹2.00 Cr approved. DSCR: 2.55 (Satisfactory). All 9 report sections bank-ready on first submission.
+        </div>
+      `
+    },
+
+    accounting: {
+      tag: 'Accounting & Bookkeeping — Sample',
+      title: 'Monthly Bookkeeping & Financial Statements',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Client identity withheld for confidentiality. Sample data representative of actual work quality.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Client Profile</h4>
+          <div class="samp-note"><strong>Type:</strong> Trading Business — Electronics &amp; Appliances &nbsp;|&nbsp; <strong>Turnover:</strong> ₹1.2 Cr/year &nbsp;|&nbsp; <strong>Frequency:</strong> Monthly Bookkeeping + Quarterly Statements &nbsp;|&nbsp; <strong>Software:</strong> Tally Prime</div>
+        </div>
+        <div class="samp-section">
+          <h4>Monthly Trial Balance Extract (₹)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Account Head</th><th>Dr Amount</th><th>Cr Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Capital Account</td><td>—</td><td>12,00,000</td></tr>
+              <tr><td>Sales Account</td><td>—</td><td>8,42,500</td></tr>
+              <tr><td>Purchase Account</td><td>5,86,200</td><td>—</td></tr>
+              <tr><td>Sundry Debtors</td><td>2,14,800</td><td>—</td></tr>
+              <tr><td>Sundry Creditors</td><td>—</td><td>1,38,400</td></tr>
+              <tr><td>Stock in Trade</td><td>3,20,000</td><td>—</td></tr>
+              <tr><td>Expenses (Admin + Selling)</td><td>78,400</td><td>—</td></tr>
+              <tr><td>GST Payable (Net)</td><td>—</td><td>52,600</td></tr>
+              <tr><td>Bank — SBI Current A/c</td><td>9,30,000</td><td>—</td></tr>
+              <tr class="samp-row-total"><td>TOTAL</td><td>21,29,400</td><td>21,33,500</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-section">
+          <h4>Deliverables Provided Every Month</h4>
+          <span class="samp-tag">Ledger-wise Summary</span><span class="samp-tag">Bank Reconciliation</span><span class="samp-tag">Debtor/Creditor Aging</span><span class="samp-tag">P&L Statement</span><span class="samp-tag">Balance Sheet</span><span class="samp-tag">GST Summary</span><span class="samp-tag">Tally Data Backup</span>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Zero discrepancy in 24 months. Audit-ready records maintained with 100% on-time delivery.
+        </div>
+      `
+    },
+
+    gst: {
+      tag: 'GST Filing — Sample',
+      title: 'GSTR-3B Monthly Return & Reconciliation',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Client identity withheld for confidentiality.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Client Profile</h4>
+          <div class="samp-note"><strong>Type:</strong> Manufacturing Unit &nbsp;|&nbsp; <strong>GST Reg.:</strong> Regular Taxpayer &nbsp;|&nbsp; <strong>Monthly Turnover:</strong> ₹18–22 Lakhs &nbsp;|&nbsp; <strong>Returns Filed:</strong> GSTR-1, GSTR-3B, GSTR-9</div>
+        </div>
+        <div class="samp-section">
+          <h4>GSTR-3B Summary — Sample Month (₹)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Particulars</th><th>Taxable Value</th><th>CGST</th><th>SGST</th><th>IGST</th><th>Total Tax</th></tr></thead>
+            <tbody>
+              <tr class="samp-row-hi"><td>Outward Supplies (Sales)</td><td>18,42,000</td><td>1,65,780</td><td>1,65,780</td><td>—</td><td>3,31,560</td></tr>
+              <tr><td>Inward Supplies (ITC Available)</td><td>12,80,000</td><td>1,15,200</td><td>1,15,200</td><td>—</td><td>2,30,400</td></tr>
+              <tr><td>ITC Reversed (Rule 42)</td><td>—</td><td>4,200</td><td>4,200</td><td>—</td><td>8,400</td></tr>
+              <tr class="samp-row-hi"><td>Net ITC Claimed</td><td>—</td><td>1,11,000</td><td>1,11,000</td><td>—</td><td>2,22,000</td></tr>
+              <tr class="samp-row-total"><td>Tax Payable in Cash</td><td>—</td><td>54,780</td><td>54,780</td><td>—</td><td>1,09,560</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-section">
+          <h4>Annual GSTR-9 Reconciliation Extract</h4>
+          <table class="samp-table">
+            <thead><tr><th>Parameter</th><th>As per Books</th><th>As per GST Portal</th><th>Difference</th></tr></thead>
+            <tbody>
+              <tr><td>Total Outward Supplies</td><td>2,18,40,000</td><td>2,18,40,000</td><td style="color:green">NIL ✓</td></tr>
+              <tr><td>Total ITC Claimed</td><td>28,64,000</td><td>28,58,200</td><td style="color:orange">5,800</td></tr>
+              <tr class="samp-row-total"><td>Reconciliation Status</td><td colspan="3" style="text-align:center">Difference identified & reversed. No demand raised.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          36 consecutive months of on-time GSTR-1 & GSTR-3B filing. Zero late fees paid. GST notice resolved — no penalty.
+        </div>
+      `
+    },
+
+    itr: {
+      tag: 'Income Tax Filing — Sample',
+      title: 'ITR-2 — Capital Gains + Salary + House Property',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Taxpayer identity withheld for confidentiality. ITR data is illustrative.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Taxpayer Overview</h4>
+          <div class="samp-note"><strong>ITR Form:</strong> ITR-2 &nbsp;|&nbsp; <strong>Income Sources:</strong> Salary, House Property, LTCG (Equity MF) &nbsp;|&nbsp; <strong>Assessment Year:</strong> AY 2024-25 &nbsp;|&nbsp; <strong>Tax Regime:</strong> Old Regime (for maximum deductions)</div>
+        </div>
+        <div class="samp-section">
+          <h4>Income Computation Summary (₹)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Head of Income</th><th>Gross</th><th>Deductions</th><th>Net Taxable</th></tr></thead>
+            <tbody>
+              <tr><td>Salary Income</td><td>12,80,000</td><td>50,000 (Std. Ded.)</td><td>12,30,000</td></tr>
+              <tr><td>House Property (Let Out)</td><td>1,44,000</td><td>43,200 (30%) + 82,400 (Int.)</td><td>18,400</td></tr>
+              <tr><td>LTCG — Equity MF</td><td>2,40,000</td><td>1,00,000 (Exemption)</td><td>1,40,000</td></tr>
+              <tr class="samp-row-hi"><td>Gross Total Income</td><td>—</td><td>—</td><td>13,88,400</td></tr>
+              <tr><td>80C (LIC + PPF + ELSS)</td><td>—</td><td>1,50,000</td><td>—</td></tr>
+              <tr><td>80D (Health Insurance)</td><td>—</td><td>25,000</td><td>—</td></tr>
+              <tr><td>80CCD(1B) — NPS</td><td>—</td><td>50,000</td><td>—</td></tr>
+              <tr class="samp-row-total"><td>Total Taxable Income</td><td>—</td><td>2,25,000</td><td>11,63,400</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-section">
+          <h4>Tax Computation (₹)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Particulars</th><th>Amount (₹)</th></tr></thead>
+            <tbody>
+              <tr><td>Tax on Salary + HP income (Old Regime slab)</td><td>1,39,620</td></tr>
+              <tr><td>Tax on LTCG @ 10% (above ₹1 lakh)</td><td>14,000</td></tr>
+              <tr><td>Rebate u/s 87A</td><td>—</td></tr>
+              <tr><td>Health & Education Cess @ 4%</td><td>6,144</td></tr>
+              <tr class="samp-row-hi"><td>Total Tax Liability</td><td>1,59,764</td></tr>
+              <tr><td>TDS Already Deducted (Form 26AS)</td><td>1,72,000</td></tr>
+              <tr class="samp-row-total"><td>Refund Due</td><td>12,236 ✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          ₹12,236 refund obtained. Saved ₹42,000 through proper 80C/80D/NPS planning vs. prior year filing.
+        </div>
+      `
+    },
+
+    tds: {
+      tag: 'TDS Services — Sample',
+      title: '26Q Return Filing + Form 16A Generation',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Deductor identity withheld. Sample 26Q return summary for illustration.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Deductor Profile</h4>
+          <div class="samp-note"><strong>Type:</strong> Private Limited Company (Manufacturing) &nbsp;|&nbsp; <strong>TAN:</strong> XXXX00000X (masked) &nbsp;|&nbsp; <strong>Quarter:</strong> Q3 FY 2024-25 (Oct–Dec 2024) &nbsp;|&nbsp; <strong>Return Type:</strong> 26Q (Contractors, Professionals)</div>
+        </div>
+        <div class="samp-section">
+          <h4>26Q Summary — Q3 FY 2024-25 (₹)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Nature of Payment</th><th>Section</th><th>No. of Deductees</th><th>Total Payment</th><th>TDS Rate</th><th>TDS Deducted</th></tr></thead>
+            <tbody>
+              <tr><td>Contractor Payments</td><td>194C</td><td>8</td><td>14,82,000</td><td>1%</td><td>14,820</td></tr>
+              <tr><td>Professional Fees</td><td>194J</td><td>3</td><td>3,60,000</td><td>10%</td><td>36,000</td></tr>
+              <tr><td>Rent</td><td>194I</td><td>1</td><td>1,20,000</td><td>10%</td><td>12,000</td></tr>
+              <tr><td>Commission</td><td>194H</td><td>2</td><td>85,000</td><td>5%</td><td>4,250</td></tr>
+              <tr class="samp-row-total"><td>Total</td><td>—</td><td>14</td><td>20,47,000</td><td>—</td><td>67,070</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-section">
+          <h4>Form 16A — Extract (Illustrative)</h4>
+          <div class="samp-note">
+            <strong>Deductee:</strong> [Name Withheld] &nbsp;|&nbsp; <strong>Section:</strong> 194J &nbsp;|&nbsp; <strong>Quarter:</strong> Q3 &nbsp;|&nbsp; <strong>Amount Paid:</strong> ₹1,20,000 &nbsp;|&nbsp; <strong>TDS Deducted:</strong> ₹12,000 &nbsp;|&nbsp; <strong>TDS Deposited:</strong> ✓ (Challan verified on TRACES)
+          </div>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Backlog of 6 pending 26Q quarters filed. ₹1.8 lakh default interest waived. Ongoing quarterly compliance maintained.
+        </div>
+      `
+    },
+
+    project: {
+      tag: 'Project Report — Sample',
+      title: 'MSME Term Loan Project Report — Food Processing',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Client identity withheld. Sample project report extract for PMEGP/MSME loan application.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Project Overview</h4>
+          <div class="samp-note"><strong>Project:</strong> Spice &amp; Namkeen Processing Unit &nbsp;|&nbsp; <strong>Scheme:</strong> PMEGP (Prime Minister's Employment Generation Programme) &nbsp;|&nbsp; <strong>Loan Applied:</strong> ₹25 Lakhs &nbsp;|&nbsp; <strong>Subsidy:</strong> 25% (Urban) — ₹6.25 Lakhs &nbsp;|&nbsp; <strong>Location:</strong> Rajasthan</div>
+        </div>
+        <div class="samp-section">
+          <h4>Cost of Project & Means of Finance (₹ in Lakhs)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Cost of Project</th><th>Amount</th><th>Means of Finance</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Land & Building</td><td>3.50</td><td>Promoter's Capital (10%)</td><td>2.50</td></tr>
+              <tr><td>Plant & Machinery</td><td>12.80</td><td>Bank Loan (65%)</td><td>16.25</td></tr>
+              <tr><td>Furniture & Fixtures</td><td>1.20</td><td>PMEGP Subsidy (25%)</td><td>6.25</td></tr>
+              <tr><td>Pre-operative Expenses</td><td>0.80</td><td>—</td><td>—</td></tr>
+              <tr><td>Working Capital Margin</td><td>6.70</td><td>—</td><td>—</td></tr>
+              <tr class="samp-row-total"><td>Total</td><td>25.00</td><td>Total</td><td>25.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-section">
+          <h4>Profitability Projections (₹ in Lakhs)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Year</th><th>Capacity (%)</th><th>Sales</th><th>Expenses</th><th>Net Profit</th><th>DSCR</th></tr></thead>
+            <tbody>
+              <tr><td>Year 1</td><td>60%</td><td>18.00</td><td>15.60</td><td>2.40</td><td>1.62</td></tr>
+              <tr><td>Year 2</td><td>75%</td><td>22.50</td><td>18.90</td><td>3.60</td><td>2.10</td></tr>
+              <tr><td>Year 3</td><td>90%</td><td>27.00</td><td>21.80</td><td>5.20</td><td>2.58</td></tr>
+              <tr class="samp-row-hi"><td>Year 5</td><td>100%</td><td>30.00</td><td>23.20</td><td>6.80</td><td>3.12</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-section">
+          <h4>Report Sections Covered</h4>
+          <span class="samp-tag">Executive Summary</span><span class="samp-tag">Promoter Background</span><span class="samp-tag">Market Analysis</span><span class="samp-tag">Technical Feasibility</span><span class="samp-tag">Cost of Project</span><span class="samp-tag">Means of Finance</span><span class="samp-tag">Revenue Projections</span><span class="samp-tag">Employment Generation</span><span class="samp-tag">Break-even Analysis</span><span class="samp-tag">DSCR</span><span class="samp-tag">Ratio Analysis</span>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          ₹25 lakh loan sanctioned + 25% PMEGP subsidy (₹6.25 lakh) availed. Bank approved in first submission.
+        </div>
+      `
+    },
+
+    biznreg: {
+      tag: 'Business Registration — Sample',
+      title: 'Private Limited Company + MSME Registration',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Client identity withheld. Registration checklist and process sample.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Client Requirement</h4>
+          <div class="samp-note"><strong>Type:</strong> New Pvt. Ltd. Company + GST + MSME/Udyam &nbsp;|&nbsp; <strong>Business:</strong> IT Services &amp; Software Development &nbsp;|&nbsp; <strong>Directors:</strong> 2 &nbsp;|&nbsp; <strong>Authorised Capital:</strong> ₹10 Lakhs &nbsp;|&nbsp; <strong>Paid-up Capital:</strong> ₹2 Lakhs</div>
+        </div>
+        <div class="samp-section">
+          <h4>Registration Process & Timeline</h4>
+          <table class="samp-table">
+            <thead><tr><th>Step</th><th>Activity</th><th>Portal</th><th>Timeline</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>DSC & DIN for Directors</td><td>MCA21</td><td>Day 1–2</td><td>✓ Done</td></tr>
+              <tr><td>2</td><td>Name Approval (RUN/SPICe)</td><td>MCA21</td><td>Day 2–4</td><td>✓ Done</td></tr>
+              <tr><td>3</td><td>SPICe+ Form Filing (MOA, AOA)</td><td>MCA21</td><td>Day 4–7</td><td>✓ Done</td></tr>
+              <tr><td>4</td><td>CIN & Certificate of Incorporation</td><td>MCA21</td><td>Day 7–10</td><td>✓ Done</td></tr>
+              <tr><td>5</td><td>PAN & TAN (Auto via SPICe)</td><td>NSDL</td><td>Day 10</td><td>✓ Done</td></tr>
+              <tr><td>6</td><td>GST Registration</td><td>GST Portal</td><td>Day 11–13</td><td>✓ Done</td></tr>
+              <tr><td>7</td><td>Udyam / MSME Registration</td><td>Udyam Portal</td><td>Day 14</td><td>✓ Done</td></tr>
+              <tr class="samp-row-total"><td colspan="3">Total Time (End-to-End)</td><td colspan="2">14 Working Days</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Pvt. Ltd. + GST + MSME completed in 14 days. Client received CIN, GSTIN, and Udyam certificate together.
+        </div>
+      `
+    },
+
+    loan: {
+      tag: 'Loan Documentation — Sample',
+      title: 'CC/OD Loan File — Complete Document Checklist',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Client identity withheld. Sample loan file structure for CC limit application.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Client Profile</h4>
+          <div class="samp-note"><strong>Type:</strong> Wholesale Trading Business &nbsp;|&nbsp; <strong>Facility:</strong> Cash Credit (CC) Limit — ₹40 Lakhs &nbsp;|&nbsp; <strong>Bank:</strong> [Withheld] &nbsp;|&nbsp; <strong>Security:</strong> Stock Hypothecation + Property Mortgage</div>
+        </div>
+        <div class="samp-section">
+          <h4>Loan File Documents Prepared</h4>
+          <table class="samp-table">
+            <thead><tr><th>#</th><th>Document</th><th>Prepared By</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Loan Application Letter</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>2</td><td>3-Year Audited P&L & Balance Sheet</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>3</td><td>Projected P&L, B/S & Cash Flow (2 yrs)</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>4</td><td>Stock Statement (Month-end)</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>5</td><td>Debtor/Creditor Aging Statement</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>6</td><td>Bank Statement (12 months compiled)</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>7</td><td>GST Returns Summary (12 months)</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>8</td><td>ITR of Business & Proprietor (3 yrs)</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>9</td><td>Net Worth Statement of Proprietor</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr><td>10</td><td>KYC Documents (Compiled & Indexed)</td><td>TaxCrest</td><td>✓</td></tr>
+              <tr class="samp-row-total"><td colspan="3">Complete File — Bank Ready</td><td>10/10 ✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          ₹40 lakh CC limit sanctioned on first submission. Banker praised the completeness of the file.
+        </div>
+      `
+    },
+
+    excel: {
+      tag: 'Excel Services — Sample',
+      title: 'MIS Dashboard & Financial Model',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Client identity withheld. Sample Excel MIS report structure.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Client Requirement</h4>
+          <div class="samp-note"><strong>Type:</strong> Manufacturing Company — 3 branches &nbsp;|&nbsp; <strong>Need:</strong> Monthly MIS Dashboard + Auto-updating Sales vs. Target Report &nbsp;|&nbsp; <strong>Tool:</strong> Excel with Pivot Tables + Macros + Conditional Formatting</div>
+        </div>
+        <div class="samp-section">
+          <h4>Sample MIS Dashboard — Monthly Summary (₹ in Lakhs)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Metric</th><th>Target</th><th>Actual</th><th>Variance</th><th>% Achievement</th></tr></thead>
+            <tbody>
+              <tr><td>Sales — Branch A</td><td>28.00</td><td>31.20</td><td style="color:green">+3.20</td><td style="color:green">111.4% ▲</td></tr>
+              <tr><td>Sales — Branch B</td><td>22.00</td><td>19.80</td><td style="color:red">-2.20</td><td style="color:red">90.0% ▼</td></tr>
+              <tr><td>Sales — Branch C</td><td>18.00</td><td>20.40</td><td style="color:green">+2.40</td><td style="color:green">113.3% ▲</td></tr>
+              <tr class="samp-row-hi"><td>Total Sales</td><td>68.00</td><td>71.40</td><td style="color:green">+3.40</td><td>105.0%</td></tr>
+              <tr><td>Gross Profit</td><td>14.96</td><td>16.12</td><td style="color:green">+1.16</td><td>107.8%</td></tr>
+              <tr><td>Expenses</td><td>8.50</td><td>8.10</td><td style="color:green">-0.40</td><td>95.3% ✓</td></tr>
+              <tr class="samp-row-total"><td>Net Profit</td><td>6.46</td><td>8.02</td><td style="color:green">+1.56</td><td>124.1% ★</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-section">
+          <h4>Excel Deliverables in This Project</h4>
+          <span class="samp-tag">Sales Dashboard (Branch-wise)</span><span class="samp-tag">P&L Auto-Summary</span><span class="samp-tag">Inventory Tracker</span><span class="samp-tag">Debtor Aging Report</span><span class="samp-tag">Cash Flow Tracker</span><span class="samp-tag">Target vs. Actual Chart</span><span class="samp-tag">One-click PDF Export Macro</span>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Report that used to take 4 hours to prepare now auto-generates in under 3 minutes. Client uses it every month.
+        </div>
+      `
+    },
+
+    consult: {
+      tag: 'Financial Consultation — Sample',
+      title: 'Tax Planning Advisory — Business Restructuring',
+      html: `
+        <div class="modal-confidential">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#C8963E"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Client identity withheld. Advisory summary for illustration only.</span>
+        </div>
+        <div class="samp-section">
+          <h4>Consultation Overview</h4>
+          <div class="samp-note"><strong>Client Type:</strong> Sole Proprietor (Construction) converting to Pvt. Ltd. &nbsp;|&nbsp; <strong>Turnover:</strong> ₹2.4 Cr/year &nbsp;|&nbsp; <strong>Issue:</strong> High personal tax + difficulty getting large contracts &nbsp;|&nbsp; <strong>Goal:</strong> Structure optimization + tax savings</div>
+        </div>
+        <div class="samp-section">
+          <h4>Tax Comparison — Proprietorship vs. Pvt. Ltd. (₹ in Lakhs)</h4>
+          <table class="samp-table">
+            <thead><tr><th>Particulars</th><th>Proprietorship</th><th>Pvt. Ltd. Co.</th><th>Saving</th></tr></thead>
+            <tbody>
+              <tr><td>Net Profit Before Tax</td><td>42.00</td><td>42.00</td><td>—</td></tr>
+              <tr><td>Director Salary (Tax Deductible)</td><td>N/A</td><td>18.00</td><td>—</td></tr>
+              <tr><td>Taxable Profit in Company</td><td>42.00</td><td>24.00</td><td>—</td></tr>
+              <tr><td>Company Tax (25.17%)</td><td>—</td><td>6.04</td><td>—</td></tr>
+              <tr><td>Director's Personal Tax (on ₹18L salary)</td><td>—</td><td>2.34</td><td>—</td></tr>
+              <tr><td>Proprietor's Personal Tax (@30%)</td><td>12.60</td><td>—</td><td>—</td></tr>
+              <tr class="samp-row-total"><td>Total Tax Outgo</td><td>12.60</td><td>8.38</td><td style="color:green">4.22 Saved</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="samp-section">
+          <h4>Recommendations Given</h4>
+          <span class="samp-tag">Convert to Pvt. Ltd.</span><span class="samp-tag">Director Salary Planning</span><span class="samp-tag">80C/80D Optimisation</span><span class="samp-tag">MSME Registration</span><span class="samp-tag">Input Tax Credit Max.</span><span class="samp-tag">PF/ESI Compliance Setup</span>
+        </div>
+        <div class="samp-result">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Annual tax saving of ₹4.22 Lakhs achieved. Pvt. Ltd. conversion enabled client to win govt. contracts above ₹1 Cr.
+        </div>
+      `
+    }
+  };
+
+  function openModal(type) {
+    const s = SAMPLES[type];
+    if (!s) return;
+    document.getElementById('modalTag').textContent = s.tag;
+    document.getElementById('modalTitle').textContent = s.title;
+    document.getElementById('modalBody').innerHTML = s.html;
+    document.getElementById('portfolioModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('portfolioModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('portfolioModal')) closeModal();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ── GLOBAL PHONE & EMAIL CLICK HANDLER (ensures tel/mailto always fires) ──
+  document.addEventListener('click', function(e) {
+    const el = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (el) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = el.getAttribute('href');
+    }
+  }, true);
+
+</script>
+
+</body>
